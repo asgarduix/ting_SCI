@@ -1,0 +1,180 @@
+/*
+【COLOR】
+『主色』紅-#E60012、白-#FFFFFF
+『標題』紅-#E60012、藍-#0E4C6D
+『頁籤』白-#FFFFFF、藍-#038CC7、黑-#555555
+『表格』
+(查詢)藍-#015478、黑-#555555、白-#FFFFF、灰-#F9F9F9
+(自定義表格)藍-#026D93/#EDF4F5、米色-#F2EDE6、黑-#111111
+(tabulator)藍-#027DB4/#038CC7/#026D93、白-#FFFFFF、黑-#111111、灰-#F2F2F2
+『按鈕』
+(主要)藍-#026D93/#026D93、綠-#026D93、紅-#FF3149、白-#FFFFFF
+(次要)米色-#EADECA、咖啡-#8C7457
+(各單元)咖啡-#8C7457、白-#FFFFFF
+*/
+
+/*
+【FONT-SIZE】
+10px: 0.625rem
+12px: 0.75rem
+14px: 0.875rem
+16px: 1rem
+18px: 1.125rem
+21px: 1.3125rem
+24px: 1.5rem
+26px: 1.6125rem
+28px: 1.75rem
+30px: 1.875rem
+32px: 2rem 
+*/
+
+@font-face {
+    font-family: Microsoft JhengHei;
+}
+
+* {
+    font-family: Microsoft JhengHei;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+* img {
+    max-width: 100%;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+button {
+    outline: none !important;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    font-size: 0.875rem;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: #aaa solid 1px;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+input {
+    outline-color: #018dcd;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    height: 24px;
+    border: #aaa solid 1px;
+    padding: 2px 4px;
+}
+
+input::placeholder {
+    /* CSS 3 標準 */
+    color: #bbb;
+    text-align: left;
+}
+
+input::-webkit-input-placeholder {
+    /* Chrome, Safari */
+    color: #bbb;
+    text-align: left;
+}
+
+input::-ms-input-placeholder {
+    /* IE 10+ */
+    color: #bbb;
+    text-align: left;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #bbb;
+    opacity: 1;
+    text-align: left;
+}
+
+input[disabled] {
+    background: #efefef;
+    color: #aaa;
+}
+
+input[attr="readonly"] {
+    background: #FFFEE1;
+    color: #333;
+} 
+
+select {
+    height: 25px;
+    border: #aaa solid 1px;
+    padding: 2px 4px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+hr.seperate-line {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+
+@media only screen and (max-width: 1280px) {}
+
+@media only screen and (max-width: 1299px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (max-width: 1199px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (max-width: 991px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 576px) {}
+
+@media only screen and (max-width: 440px) {}
+
+@media only screen and (max-width: 420px) {}
