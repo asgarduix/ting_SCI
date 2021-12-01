@@ -264,6 +264,7 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-third">
@@ -282,11 +283,6 @@
                                 <!-- 跟隨tabulator_upload -->
                                 <div class="content-component content-upload">
                                     <form action="">
-                                        <div class="upload-inner">
-                                            <div class="upload-item upload-title">立帳日</div>
-                                            <div class="upload-item upload-field"><input type="date" id="credit_rating_date" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            
-                                        </div>
                                         <div class="upload-inner">
                                             <div class="upload-item upload-title">上傳檔案</div>
                                             <div class="upload-item upload-field"><input type="text"></div>
@@ -646,7 +642,8 @@
         請款金額: "設計文字",
         授權單位: "設計文字",
         授權人員: "設計文字",
-        卡後四碼: "設計文字"
+        卡後四碼: "設計文字",
+        立帳日: "立帳日"
     }, ];
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -671,6 +668,7 @@
             { title: "授權單位", field: "授權單位" },
             { title: "授權人員", field: "授權人員" },
             { title: "卡後四碼", field: "卡後四碼" },
+            { title: "立帳日", field: "立帳日" },
         ],
     });
     </script>

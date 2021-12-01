@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-FACM0150-信用卡立帳作業</title>
+    <title>華南產物保險-FACM0250-信用卡整批入帳維護作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -198,7 +198,7 @@
                         <ul>
                             <li><a href="#">財務</a></li>
                             <li><a href="#">信用卡退貨</a></li>
-                            <li><a href="#">信用卡立帳作業</a></li>
+                            <li><a href="#">信用卡整批入帳維護作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -206,7 +206,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">信用卡立帳作業</div>
+                                <div class="unitname-item unitname-title">信用卡整批入帳維護作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -257,18 +257,14 @@
                                 <div class="content-component content-btn">
                                     <div class="content-btn-basic">
                                         <ul>
-                                            <li><button class="content-btn-item btn-basic btn-prime"><span>立帳</span></button></li>
+                                            <li><button class="content-btn-item btn-basic btn-prime"><span>入帳</span></button></li>
+                                            <li><button class="content-btn-item btn-basic btn-outline"><span>駁回</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third"><span>收單行維護</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -279,29 +275,6 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
-                                <!-- 跟隨tabulator_upload -->
-                                <div class="content-component content-upload">
-                                    <form action="">
-                                        <div class="upload-inner">
-                                            <div class="upload-item upload-title">立帳日</div>
-                                            <div class="upload-item upload-field"><input type="date" id="credit_rating_date" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            
-                                        </div>
-                                        <div class="upload-inner">
-                                            <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text"></div>
-                                            <div class="upload-item upload-btn">
-                                                <ul>
-                                                    <li><button>瀏覽</button></li>
-                                                    <li><button disabled="">上傳</button></li>
-                                                </ul>
-                                            </div>
-                                            <div class="upload-item upload-note">
-                                                <p>檔案格式：txt、csv</p>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -646,7 +619,8 @@
         請款金額: "設計文字",
         授權單位: "設計文字",
         授權人員: "設計文字",
-        卡後四碼: "設計文字"
+        卡後四碼: "設計文字",
+        立帳日: "立帳日"
     }, ];
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -671,6 +645,7 @@
             { title: "授權單位", field: "授權單位" },
             { title: "授權人員", field: "授權人員" },
             { title: "卡後四碼", field: "卡後四碼" },
+            { title: "立帳日", field: "立帳日" },
         ],
     });
     </script>
