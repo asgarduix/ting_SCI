@@ -123,10 +123,37 @@ input[disabled] {
     color: #aaa;
 }
 
-input[attr="readonly"] {
+input[attr="readonly"],
+select[attr="readonly"] {
     background: #FFFEE1;
     color: #333;
-} 
+}
+
+input[attr="money"] {
+    text-align: right;
+}
+
+input[attr="readonly-money"] {
+    background: #FFFEE1;
+    color: #333;
+    text-align: right;
+}
+
+input[attr="readonly-money-highlight"] {
+    color: #E60012;
+    background: #FFFEE1;
+    text-align: right;
+}
+
+input[attr="readonly-warning"] {
+    color: #E60012;
+    font-weight: bold;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    margin-left: 0;
+    padding: 0;
+}
 
 select {
     height: 25px;
@@ -154,7 +181,7 @@ h6 {
 hr.seperate-line {
     margin-top: 10px;
     margin-bottom: 20px;
-    border-top: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
 }
 
 @media only screen and (max-width: 1280px) {}
