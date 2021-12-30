@@ -2222,6 +2222,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-reject span::before {
@@ -2231,6 +2233,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-print span::before {
@@ -2240,6 +2244,8 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-insert span::before {
@@ -2249,6 +2255,19 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     color: #8C7457;
     margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
+}
+
+.btn-save span::before {
+    font-family: 'Material Icons';
+    content: "save";
+    font-feature-settings: 'liga';
+    vertical-align: middle;
+    color: #8C7457;
+    margin-right: 1px;
+    display: inline-block;
+    margin-top: -2px;
 }
 
 .btn-third {
@@ -2947,6 +2966,10 @@ a.menu-active .menu-bar {
     border-bottom: none;
 }
 
+.sub-form+.customize-form-row {
+    border-top: #aaa solid 1px;
+}
+
 .customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
     position: relative;
@@ -2971,10 +2994,13 @@ a.menu-active .menu-bar {
     margin-right: 1px;
 }
 
-.customize-form-header .add-sub-form {
-    border-right: #aaa solid 1px;
-    display: table-cell;
+.customize-form-header span.num-counter::before {
+    content: "：";
+}
 
+.customize-form-header .add-sub-form {
+    display: table-cell;
+    padding: 2px 4px;
 }
 
 .customize-form-header .add-sub-form button {
@@ -2995,7 +3021,7 @@ a.menu-active .menu-bar {
 }
 
 .sub-form {
-    border-top: #ccc solid 10px;
+    border-bottom: #ccc solid 10px;
 }
 
 .sub-form:nth-last-child(1) {
@@ -3082,6 +3108,13 @@ a.menu-active .menu-bar {
     line-height: 1.2;
 }
 
+.required-field .customize-form-title::before {
+    content: "*";
+    color: #E60012;
+    margin-right: 1px;
+    font-size: 0.75rem;
+}
+
 .customize-form-entry {
     background: #fff;
     padding: 4px 3px;
@@ -3102,8 +3135,10 @@ a.menu-active .menu-bar {
 }
 
 .customize-form-entry li {
-    display: inline-block;
-    margin-right: 2px;
+    /*display: inline-block;*/
+    display: table-cell;
+    /*margin-right: 7px;*/
+    padding-right: 7px;
     /*margin-bottom: 2px;*/
 }
 
@@ -3166,6 +3201,11 @@ a.menu-active .menu-bar {
 .customize-form-entry-2 {
     width: 20%;
     max-width: 20%;
+}
+
+.customize-form-entry-2-5 {
+    width: 25%;
+    max-width: 25%;
 }
 
 .customize-form-entry-3 {
@@ -3251,7 +3291,7 @@ a.menu-active .menu-bar {
     position: relative;
 }
 
-.customize-form-row-btn .customize-form-field button {
+.customize-form-row-btn .customize-form-field button.field-btn {
     width: 100%;
     display: block;
     background: #026D93;
@@ -3557,6 +3597,7 @@ a.menu-active .menu-bar {
     line-height: 1;
     padding: 4px 10px;
     border-radius: 4px;
+    vertical-align: text-bottom;
 }
 
 .customize-form-field-delete button:hover {
@@ -3718,6 +3759,84 @@ a.menu-active .menu-bar {
     font-size: 0.875rem;
 }
 
+/* 備註 */
+.customize-form-row-note ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.customize-form-row-note li {
+    margin-bottom: 10px;
+    display: table;
+    table-layout: fixed;
+}
+
+.customize-form-row-note li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.customize-form-row-note li span {
+    width: 25px;
+    display: table-cell;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: #026D93;
+    text-align: left;
+}
+
+.customize-form-row-note li p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: #777;
+    text-align: left;
+    display: table-cell;
+}
+
+.customize-form-input input[type='text'] {
+    width: 180px;
+    margin-bottom: 4px;
+}
+
+/* customize-form-tooltip-content */
+.tp-container {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    color: #333;
+    background: #fff;
+    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+}
+
+span.tp {
+    position: absolute;
+    color: #ff8c00;
+    cursor: default;
+    line-height: 1;
+}
+
+.fade-in {
+    display: block;
+    animation: fade 0.2s linear forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
@@ -3845,6 +3964,49 @@ a.menu-active .menu-bar {
     color: #FF3149;
 }
 
+/* 月份 */
+.content-info-date ul {
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0;
+    border: #027DB4 solid 1px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.content-info-date li {
+    width: 16.66666%;
+    float: left;
+    border-right: #027DB4 solid 1px;
+}
+
+.content-info-date li:nth-child(6),
+.content-info-date li:nth-child(12) {
+    border-right: none;
+}
+
+.content-info-date span {
+    font-size: 0.875rem;
+    display: block;
+}
+
+.content-info-date span:nth-child(1) {
+    font-weight: bold;
+    background: rgba(206, 226, 255, .6);
+    padding: 0 4px;
+    color: #027DB4;
+}
+
+.content-info-date span[attr="money"] {
+    background: #fff;
+    padding: 2px;
+    text-align: right;
+}
+
+.content-info-date span[attr="money"]::before {
+    content: "$";
+}
+
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
@@ -3869,17 +4031,21 @@ a.menu-active .menu-bar {
     line-height: 1;
     padding: 2px 12px;
     border-radius: 3px;
+    border: #ccc solid 1px;
 }
 
 .content-tab-link li a:hover {
     background: #e0ecff;
     color: #483dcc;
+    border-color: #e0ecff;
 }
 
 .content-tab-link li a.tab-link-active {
     background: #e0ecff;
     color: #483dcc;
+    border-color: #e0ecff;
 }
+
 /* END: tab-link */
 /* START: msg */
 .single-msg-block {
@@ -3905,6 +4071,7 @@ a.menu-active .menu-bar {
     color: #FF3149;
     margin-right: 3px;
 }
+
 /* END: msg */
 @media only screen and (max-width: 1280px) {
 
