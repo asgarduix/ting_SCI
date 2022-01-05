@@ -2958,6 +2958,7 @@ a.menu-active .menu-bar {
 .customize-form-multiple-row {
     border-bottom: #aaa solid 1px;
     position: relative;
+    /* display: flex; */
     /*overflow: auto;*/
 }
 
@@ -2977,6 +2978,19 @@ a.menu-active .menu-bar {
 
 .customize-form-header {
     background: rgba(3, 140, 199, .05);
+}
+.customize-form-header.customize-form-header-2 {
+    float: left;
+    width: 50%;
+    border-left: 1px solid #aaa;
+}
+.customize-form-header.customize-form-header-2:nth-child(1) {
+    border-left: none;
+}
+.customize-form-row::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .customize-form-header span {
