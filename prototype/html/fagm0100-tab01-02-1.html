@@ -175,8 +175,8 @@
                                                 <div class="query-field-item query-field-title">作業種類</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
-                                                        <option value="" selected>維護</option>
-                                                        <option value="">核印</option>
+                                                        <option value="">維護</option>
+                                                        <option value="" selected>核印</option>
                                                         <option value="">扣款</option>
                                                         <option value="">報表</option>
                                                     </select>
@@ -190,21 +190,53 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">約定扣款帳戶<br>統編/ID</div>
+                                                <div class="query-field-item query-field-title">作業項目</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="建檔單位" title="" data-toggle="tooltip" data-placement="top">
+                                                    <select name="" id="">
+                                                        <option value="">產生核印檔</option>
+                                                        <option value="">回寫核印結果</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">申請單號</div>
+                                                <div class="query-field-item query-field-title">作業選項</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="建檔單位" title="" data-toggle="tooltip" data-placement="top">
+                                                    <select name="" id="">
+                                                        <option value="">委托授權核印檔</option>
+                                                        <option value="">終止授權核印檔</option>
+                                                        <option value="">委託核印(補件)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">建檔起迄日</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">統編或ID</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <input type="text" name="" value="" title="" data-toggle="tooltip" data-placement="top">
                                                 </div>
                                             </div>
                                         </div>
@@ -221,57 +253,16 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-secondary">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-third"><span>約定扣款</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>終止扣款</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>變更扣款(帳號或郵件)</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>產生核印檔</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <hr class="seperate-line">
-                        <!-- customize-form -->
-                        <div class="customize-form">
-                            <div class="content-component content-table">
-                                <div class="table-func">
-                                    <div class="table-func-inner">
-                                        <div class="table-func-basic">
-                                            <div class="func-basic-item func-download">
-                                                <ul>
-                                                    <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="func-basic-item func-count">
-                                                <ul>
-                                                    <li class="count-total">2</li>
-                                                </ul>
-                                            </div>
-                                            <div class="func-basic-item func-filter">
-                                                <div class="func-filter-inner">
-                                                    <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-func-page">頁碼</div>
-                                    </div>
-                                </div>
-                                <div id="table01"></div>
-                                <div class="table-footer">footer</div>
-                            </div>
-                        </div>
-                        
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
