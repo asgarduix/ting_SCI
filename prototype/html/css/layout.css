@@ -2982,10 +2982,10 @@ a.menu-active .menu-bar {
 .customize-form-header.customize-form-header-2 {
     float: left;
     width: 50%;
-    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
 }
-.customize-form-header.customize-form-header-2:nth-child(1) {
-    border-left: none;
+.customize-form-header.customize-form-header-2:last-child {
+    border-right: none;
 }
 .customize-form-row::after{
     content: "";
