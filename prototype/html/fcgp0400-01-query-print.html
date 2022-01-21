@@ -145,10 +145,15 @@
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款地區</div>
+                                                <div class="query-field-item query-field-title">付款單位</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <input type="text" name="付款地區" value="台北總公司" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="付款單位" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,7 +163,12 @@
                                                 <div class="query-field-item query-field-title">所屬地區</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <input type="text" name="所屬地區" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="所屬地區" value="123" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -180,9 +190,11 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">票據種類</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <input type="text" name="票據種類" value="台北總公司" title="" data-toggle="tooltip" data-placement="top">
-                                                    </div>
+                                                    <select name="票據種類" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">佣金</option>
+                                                        <option value="">沖暫收款</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -191,7 +203,13 @@
                                                 <div class="query-field-item query-field-title">票據號碼</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <input type="text" name="票據號碼" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="票據號碼" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="票據號碼" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,8 +221,13 @@
                                                 <div class="query-field-item query-field-title">實付起迄</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine"><input type="date" id="credit_rating_date" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                                        <div class="entry-combine"><input type="date" id="credit_rating_date" name="到期日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="交易起訖日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

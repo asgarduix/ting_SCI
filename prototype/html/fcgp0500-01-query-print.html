@@ -147,7 +147,14 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">付款地區</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="公司代碼" title="" data-toggle="tooltip" data-placement="top">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="付款地區" value="123" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -155,7 +162,14 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">所屬地區</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="公司代碼" title="" data-toggle="tooltip" data-placement="top">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="所屬地區" value="123" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,7 +180,7 @@
                                                     <ul>
                                                         <li><input type="checkbox" id="cb01" name="報表類別"><label for="cb01">簽領名冊</label></li>
                                                         <li><input type="checkbox" id="cb02" name="報表類別"><label for="cb02">付款明細</label></li>
-                                                        <li><input type="checkbox" id="cb02" name="報表類別"><label for="cb03">是否簽領</label></li>
+                                                        <!-- <li><input type="checkbox" id="cb02" name="報表類別"><label for="cb03">是否簽領</label></li> -->
                                                     </ul>
                                                 </div>
                                             </div>
@@ -177,7 +191,11 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">票據種類</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="票據種類" title="" data-toggle="tooltip" data-placement="top">
+                                                    <select name="票據種類" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">佣金</option>
+                                                        <option value="">沖暫收款</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
