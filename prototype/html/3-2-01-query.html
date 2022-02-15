@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-付款狀態查詢作業</title>
+    <title>華南產物保險-匯款資料處理作業</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -120,7 +120,7 @@
                         <ul>
                             <li><a href="#">財務</a></li>
                             <li><a href="#">銷帳系統</a></li>
-                            <li><a href="#">付款狀態查詢作業</a></li>
+                            <li><a href="#">匯款資料處理作業</a></li>
                         </ul>
                     </div>
                     <!-- card -->
@@ -128,9 +128,29 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">付款狀態查詢作業</div>
+                                <div class="unitname-item unitname-title">匯款資料處理作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- unittab -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-unittab">
+                                <!-- unitTab -->
+                                <div class="content-component content-unittab">
+                                    <ul>
+                                        <li><a href="3-2-01-query.html" class="unittab-active">匯款資料處理作業</a></li>
+                                        <li><a href="3-2-02-query.html">匯款失敗人工處理</a></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -141,47 +161,6 @@
                                 <!-- query -->
                                 <div class="content-component content-query">
                                     <!-- 地區/託收銀行/票據號碼 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款單位</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <select>
-                                                            <option>台北總公司</option>
-                                                            <option>板橋分公司</option>
-                                                            <option>台中分公司</option>
-                                                            <option>台南分公司</option>
-                                                            <option>高雄分公司</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款銀行</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <select>
-                                                            <option>華銀中山</option>
-                                                            <option>富邦安和</option>
-                                                            <option>遠東商銀</option>
-                                                            <option>台銀松山</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款帳號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" name="" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
@@ -210,13 +189,14 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款別</div>
+                                                <div class="query-field-item query-field-title">付款銀行</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <select>
-                                                            <option>電匯</option>
-                                                            <option>支票</option>
-                                                            <option>現金</option>
+                                                            <option>華銀中山</option>
+                                                            <option>富邦安和</option>
+                                                            <option>遠東商銀</option>
+                                                            <option>台銀松山</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -224,18 +204,16 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款狀況</div>
+                                                <div class="query-field-item query-field-title">付款確認日</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <select>
-                                                            <option>待付款</option>
-                                                            <option>待開票</option>
-                                                            <option>已開票</option>
-                                                            <option>匯款中</option>
-                                                            <option>已付款</option>
-                                                            <option>匯款失敗</option>
-                                                            <option>付款回存</option>
-                                                        </select>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="付款確認日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="date" name="付款確認日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -244,35 +222,9 @@
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">受款人</div>
+                                                <div class="query-field-item query-field-title">付款人員</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="受款人" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">受款人ID</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="受款人ID" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">受款人帳號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="受款人帳號" title="" data-toggle="tooltip" data-placement="top">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款金額</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="付款金額" title="" data-toggle="tooltip" data-placement="top">
+                                                    <input type="text" placeholder="請輸入值" name="付款人員" title="" data-toggle="tooltip" data-placement="top">
                                                 </div>
                                             </div>
                                         </div>
@@ -294,62 +246,38 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">實付日期</div>
+                                                <div class="query-field-item query-field-title">申請單號</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="date" name="實付日期" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="date" name="實付日期" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
+                                                    <input type="text" placeholder="請輸入值" name="申請單號" title="" data-toggle="tooltip" data-placement="top">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="query-row">
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-input query-input-half">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款批琥</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine">
-                                                            <input type="text" name="付款批琥" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">申請單號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="申請單號" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="申請單號" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">報表</div>
+                                                <div class="query-field-item query-field-title">列印種類</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="checkbox" id="cb01" name="報表"><label for="cb01">申請表彙整</label></li>
-                                                        <li><input type="checkbox" id="cb02" name="報表"><label for="cb02">電匯明細表</label></li>
+                                                        <li><input type="checkbox" id="cb01" name="報表"><label for="cb01">銀行匯款明細表</label></li>
+                                                        <li><input type="checkbox" id="cb02" name="報表"><label for="cb02">銀行重匯電匯明細表</label></li>
+                                                        <li><input type="checkbox" id="cb03" name="報表"><label for="cb03">銀行電匯清單列印（往來帳）明細表</label></li>
+                                                        <li>
+                                                            <select>
+                                                                <option>華銀中山</option>
+                                                                <option>富邦安和</option>
+                                                                <option>遠東商銀</option>
+                                                                <option>台銀松山</option>
+                                                            </select>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -370,109 +298,51 @@
                                             <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                         </ul>
                                     </div>
+                                    <div class="content-btn-third">
+                                        <ul>
+                                            <li><button class="content-btn-item btn-third"><span>匯款資料轉出</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>上傳匯款回覆檔</span></button></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
                         <!-- 資訊磚 -->
-                        <div class="card-detail">
+                        <!-- <div class="card-detail">
                             <div class="customize-form page-customize-form">
-                                <!-- <div class="customize-form-row">
-                                    <div class="customize-form-header">
-                                        <span>憑證資料</span>
-                                    </div>
-                                </div> -->
-                                <!-- 現金金額/銀存金額/支票金額/信用卡金額 -->
                                 <div class="customize-form-row">
                                     <div class="customize-form-inner">
                                         <div class="customize-form-field customize-form-field-1">
                                             <div class="customize-field-inner">
-                                                <div class="customize-form-title">付款金額</div>
+                                                <div class="customize-form-title">匯款筆數</div>
                                                 <div class="customize-form-entry">
-                                                    56,000.00
+                                                    3
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="customize-form-field customize-form-field-1">
                                             <div class="customize-field-inner">
-                                                <div class="customize-form-title">筆數</div>
+                                                <div class="customize-form-title">匯款總金額</div>
                                                 <div class="customize-form-entry">
-                                                    234
+                                                    9,000,000
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="customize-form-field customize-form-field-2">
                                             <div class="customize-field-inner">
-                                                <div class="customize-form-title">&nbsp;</div>
+                                                <div class="customize-form-title">匯費總金額</div>
                                                 <div class="customize-form-entry">
-                                                    &nbsp;
+                                                    100
                                                 </div>
                                             </div>
                                         </div>
                                         
                                     </div>
                                 </div>
-                                <!-- 暫收金額/手續費/兌換損益(借)/兌換損益(貸) -->
-                                <div class="customize-form-row">
-                                    <div class="customize-form-inner">
-                                        <div class="customize-form-field customize-form-field-1">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">印花稅</div>
-                                                <div class="customize-form-entry">
-                                                    0
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="customize-form-field customize-form-field-1">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">郵資</div>
-                                                <div class="customize-form-entry">
-                                                    120
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="customize-form-field customize-form-field-2">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">匯費</div>
-                                                <div class="customize-form-entry">
-                                                    0
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 現金折扣/實生呆帳/憑證合計/應收保費合計 -->
-                                <div class="customize-form-row">
-                                    <div class="customize-form-inner">
-                                        <div class="customize-form-field customize-form-field-1">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">實付金額</div>
-                                                <div class="customize-form-entry">
-                                                    56,120.00
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="customize-form-field customize-form-field-1">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">&nbsp;</div>
-                                                <div class="customize-form-entry">
-                                                    &nbsp;
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="customize-form-field customize-form-field-2">
-                                            <div class="customize-field-inner">
-                                                <div class="customize-form-title">&nbsp;</div>
-                                                <div class="customize-form-entry">
-                                                    &nbsp;
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <hr class="seperate-line">
+                        <hr class="seperate-line"> -->
                         <!-- customize-form -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -684,18 +554,18 @@
     let table01Data = [{
     id: "b1",
     項次: "設計文字",
-    帳戶單位: "設計文字",
-    領款單位: "設計文字",
-    付款方式: "設計文字",
-    受款人ID: "設計文字",
-    受款人: "設計文字",
-    幣別: "設計文字",
-    實付金額: "設計文字",
-    郵資: "設計文字",
-    匯費: "設計文字",
-    付款付訖: "設計文字",
-    聯絡窗口: "設計文字",
-    聯絡電話: "設計文字"
+    付款單位: "設計文字",
+    申請單號: "設計文字",
+    付款確認日: "設計文字",
+    匯款狀態: "設計文字",
+    付款種類: "設計文字",
+    付款銀行: "設計文字",
+    付款帳號: "設計文字",
+    匯款筆數: "設計文字",
+    匯費總金額: "設計文字",
+    匯款金額: "設計文字",
+    付款人員: "設計文字",
+    匯款失敗: "設計文字"
 }, ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
@@ -724,18 +594,18 @@ var table01 = new Tabulator("#table01", {
             }
         },
         { title: "項次", field: "項次" },
-        { title: "帳戶單位", field: "帳戶單位" },
-        { title: "領款單位", field: "領款單位" },
-        { title: "付款方式", field: "付款方式" },
-        { title: "受款人ID", field: "受款人ID" },
-        { title: "受款人", field: "受款人" },
-        { title: "幣別", field: "幣別" },
-        { title: "實付金額", field: "實付金額" },
-        { title: "郵資", field: "郵資" },
-        { title: "匯費", field: "匯費" },
-        { title: "付款付訖", field: "付款付訖" },
-        { title: "聯絡窗口", field: "聯絡窗口" },
-        { title: "聯絡電話", field: "聯絡電話" },
+        { title: "付款單位", field: "付款單位" },
+        { title: "申請單號", field: "申請單號" },
+        { title: "付款確認日", field: "付款確認日" },
+        { title: "匯款狀態", field: "匯款狀態" },
+        { title: "付款種類", field: "付款種類" },
+        { title: "付款銀行", field: "付款銀行" },
+        { title: "付款帳號", field: "付款帳號" },
+        { title: "匯款筆數", field: "匯款筆數" },
+        { title: "匯費總金額", field: "匯費總金額" },
+        { title: "匯款金額", field: "匯款金額" },
+        { title: "付款人員", field: "付款人員" },
+        { title: "匯款失敗", field: "匯款失敗" },
     ],
 });
     </script>
