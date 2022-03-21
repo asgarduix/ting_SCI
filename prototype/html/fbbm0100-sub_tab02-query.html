@@ -725,8 +725,8 @@
                                 <!-- tab-link -->
                                 <div class="content-component content-tab-link">
                                     <ul>
-                                        <li><a href="#" class="tab-link-active">保單明細</a></li>
-                                        <li><a href="#">票據憑證</a></li>
+                                        <li><a href="#">保單明細</a></li>
+                                        <li><a href="#" class="tab-link-active">票據憑證</a></li>
                                         <li><a href="#">信用卡憑證</a></li>
                                         <li><a href="#">銀存憑證</a></li>
                                         <li><a href="#">現金憑證</a></li>
@@ -1041,19 +1041,34 @@
 <script>
     var table2Data = [{
         checkbox: "checkbox",
-        憑證編號: "設計文字",
-        要保號碼: "設計文字",
-        要保人ID: "設計文字",
-        要保人: "設計文字",
-        被保險人: "設計文字",
-        應收保費: "設計文字",
-        單位: "設計文字",
-        保單號碼: "設計文字",
-        批單號碼: "設計文字",
-        序號: "設計文字",
-        期別: "設計文字",
+        票號: "設計文字",
+        開票人: "設計文字",
+        金額: "設計文字",
+        原幣金額: "設計文字",
         幣別: "設計文字",
-        原幣保費: "設計文字"
+        到期日: "設計文字",
+        收費日郵戳日: "設計文字",
+        付款行: "設計文字",
+        電匯銀行名稱: "設計文字",
+        退回維護日: "設計文字",
+        郵寄日: "設計文字",
+        票據兌現日: "設計文字",
+        票據轉雜收日: "設計文字",
+        帳號票號: "設計文字",
+        郵匯費: "設計文字",
+        支付對象ID: "設計文字",
+        支付對象: "設計文字",
+        地址: "設計文字",
+        無法清理之樣態: "設計文字",
+        銀行退回手續費: "設計文字",
+        付款行: "設計文字",
+        付款帳號: "設計文字",
+        更新日期: "設計文字",
+        建檔日期: "設計文字",
+        操作人員: "設計文字",
+        新暫收號: "設計文字",
+        新暫收日: "設計文字",
+        新暫收序號: "設計文字"
     }, ]
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -1071,19 +1086,35 @@
         selectable: true,
         columns: [
             { title: "checkbox", field: "checkbox" },
-            { title: "憑證編號", field: "憑證編號" },
-            { title: "要保號碼", field: "要保號碼" },
-            { title: "要保人ID", field: "要保人ID" },
-            { title: "要保人", field: "要保人" },
-            { title: "被保險人", field: "被保險人" },
-            { title: "應收保費", field: "應收保費" },
-            { title: "單位", field: "單位" },
-            { title: "保單號碼", field: "保單號碼" },
-            { title: "批單號碼", field: "批單號碼" },
-            { title: "序號", field: "序號" },
-            { title: "期別", field: "期別" },
+            { title: "票號", field: "票號" },
+            { title: "開票人", field: "開票人" },
+            { title: "金額", field: "金額" },
+            { title: "原幣金額", field: "原幣金額" },
             { title: "幣別", field: "幣別" },
-            { title: "原幣保費", field: "原幣保費" },
+            { title: "到期日", field: "到期日" },
+            { title: "收費日/郵戳日", field: "收費日/郵戳日" },
+            { title: "暫收序號", field: "暫收序號" },
+            { title: "付款行", field: "付款行" },
+            { title: "電匯銀行名稱", field: "電匯銀行名稱" },
+            { title: "退回維護日", field: "退回維護日" },
+            { title: "郵寄日", field: "郵寄日" },
+            { title: "票據兌現日", field: "票據兌現日" },
+            { title: "票據轉雜收日", field: "票據轉雜收日" },
+            { title: "帳號/票號", field: "帳號票號" },
+            { title: "郵匯費", field: "郵匯費" },
+            { title: "支付對象ID", field: "支付對象ID" },
+            { title: "支付對象", field: "支付對象" },
+            { title: "地址", field: "地址" },
+            { title: "無法清理之樣態", field: "無法清理之樣態" },
+            { title: "銀行退回手續費", field: "銀行退回手續費" },
+            { title: "付款行", field: "付款行" },
+            { title: "付款帳號", field: "付款帳號" },
+            { title: "更新日期", field: "更新日期" },
+            { title: "建檔日期", field: "建檔日期" },
+            { title: "操作人員", field: "操作人員" },
+            { title: "新暫收號", field: "新暫收號" },
+            { title: "新暫收日", field: "新暫收日" },
+            { title: "新暫收序號", field: "新暫收序號" },
         ],
     });
     </script>
