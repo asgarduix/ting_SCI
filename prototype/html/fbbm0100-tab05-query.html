@@ -727,32 +727,15 @@
                                 <!-- tab-link -->
                                 <div class="content-component content-tab-link">
                                     <ul>
-                                        <li><a href="fbbm0100-tab01-query.html" class="tab-link-active">保單明細</a></li>
+                                        <li><a href="fbbm0100-tab01-query.html">保單明細</a></li>
                                         <li><a href="fbbm0100-tab02-query.html">票據憑證</a></li>
                                         <li><a href="fbbm0100-tab03-query.html">信用卡憑證</a></li>
                                         <li><a href="fbbm0100-tab04-query.html">銀存憑證</a></li>
-                                        <li><a href="fbbm0100-tab05-query.html">現金憑證</a></li>
+                                        <li><a href="fbbm0100-tab05-query.html" class="tab-link-active">現金憑證</a></li>
                                         <li><a href="fbbm0100-tab06-query.html">暫收支付</a></li>
                                         <li><a href="#">暫收支付修改</a></li>
                                         <li><a href="#">暫收抵繳</a></li>
                                     </ul>
-                                </div>
-                                <!-- label -->
-                                <div class="content-component content-label">
-                                    <div class="label-inner">
-                                        <div class="label-item">
-                                            <div class="label-title">原幣金額合計</div>
-                                            <div class="label-content label-content-counter">100,000,005</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">兌換損益合計</div>
-                                            <div class="label-content label-content-counter">0</div>
-                                        </div>
-                                        <div class="label-item">
-                                            <div class="label-title">金額合計</div>
-                                            <div class="label-content label-content-counter">100,000,000</div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="content-component content-table">
                                     <div class="table-func">
@@ -1060,19 +1043,12 @@
 <script>
     var table2Data = [{
         checkbox: "checkbox",
-        憑證編號: "設計文字",
-        要保號碼: "設計文字",
-        要保人ID: "設計文字",
-        要保人: "設計文字",
-        被保險人: "設計文字",
-        應收保費: "設計文字",
-        單位: "設計文字",
-        保單號碼: "設計文字",
-        批單號碼: "設計文字",
-        序號: "設計文字",
-        期別: "設計文字",
-        幣別: "設計文字",
-        原幣保費: "設計文字"
+        現金: "設計文字",
+        現金收費日: "設計文字",
+        等同應收保費: "設計文字",
+        有現金確認書: "設計文字",
+        現金轉存銀行: "設計文字",
+        差額: "設計文字"
     }, ]
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -1090,19 +1066,12 @@
         selectable: true,
         columns: [
             { title: "checkbox", field: "checkbox" },
-            { title: "憑證編號", field: "憑證編號" },
-            { title: "要保號碼", field: "要保號碼" },
-            { title: "要保人ID", field: "要保人ID" },
-            { title: "要保人", field: "要保人" },
-            { title: "被保險人", field: "被保險人" },
-            { title: "應收保費", field: "應收保費" },
-            { title: "單位", field: "單位" },
-            { title: "保單號碼", field: "保單號碼" },
-            { title: "批單號碼", field: "批單號碼" },
-            { title: "序號", field: "序號" },
-            { title: "期別", field: "期別" },
-            { title: "幣別", field: "幣別" },
-            { title: "原幣保費", field: "原幣保費" },
+            { title: "現金", field: "現金" },
+            { title: "現金收費日", field: "現金收費日" },
+            { title: "等同應收保費", field: "等同應收保費" },
+            { title: "有現金確認書", field: "有現金確認書" },
+            { title: "現金轉存銀行", field: "現金轉存銀行" },
+            { title: "差額", field: "差額" },
         ],
     });
     </script>

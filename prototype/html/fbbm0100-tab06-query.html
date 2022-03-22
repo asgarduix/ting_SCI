@@ -727,12 +727,12 @@
                                 <!-- tab-link -->
                                 <div class="content-component content-tab-link">
                                     <ul>
-                                        <li><a href="fbbm0100-tab01-query.html" class="tab-link-active">保單明細</a></li>
+                                        <li><a href="fbbm0100-tab01-query.html">保單明細</a></li>
                                         <li><a href="fbbm0100-tab02-query.html">票據憑證</a></li>
                                         <li><a href="fbbm0100-tab03-query.html">信用卡憑證</a></li>
                                         <li><a href="fbbm0100-tab04-query.html">銀存憑證</a></li>
                                         <li><a href="fbbm0100-tab05-query.html">現金憑證</a></li>
-                                        <li><a href="fbbm0100-tab06-query.html">暫收支付</a></li>
+                                        <li><a href="fbbm0100-tab06-query.html" class="tab-link-active">暫收支付</a></li>
                                         <li><a href="#">暫收支付修改</a></li>
                                         <li><a href="#">暫收抵繳</a></li>
                                     </ul>
@@ -1060,19 +1060,15 @@
 <script>
     var table2Data = [{
         checkbox: "checkbox",
-        憑證編號: "設計文字",
-        要保號碼: "設計文字",
-        要保人ID: "設計文字",
-        要保人: "設計文字",
-        被保險人: "設計文字",
-        應收保費: "設計文字",
-        單位: "設計文字",
-        保單號碼: "設計文字",
-        批單號碼: "設計文字",
         序號: "設計文字",
-        期別: "設計文字",
         幣別: "設計文字",
-        原幣保費: "設計文字"
+        原幣金額: "設計文字",
+        兌換損益: "設計文字",
+        金額: "設計文字",
+        支付方式: "設計文字",
+        電匯銀行: "設計文字",
+        退回維護日: "設計文字",
+        郵寄日: "設計文字"
     }, ]
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -1090,19 +1086,15 @@
         selectable: true,
         columns: [
             { title: "checkbox", field: "checkbox" },
-            { title: "憑證編號", field: "憑證編號" },
-            { title: "要保號碼", field: "要保號碼" },
-            { title: "要保人ID", field: "要保人ID" },
-            { title: "要保人", field: "要保人" },
-            { title: "被保險人", field: "被保險人" },
-            { title: "應收保費", field: "應收保費" },
-            { title: "單位", field: "單位" },
-            { title: "保單號碼", field: "保單號碼" },
-            { title: "批單號碼", field: "批單號碼" },
             { title: "序號", field: "序號" },
-            { title: "期別", field: "期別" },
             { title: "幣別", field: "幣別" },
-            { title: "原幣保費", field: "原幣保費" },
+            { title: "原幣金額", field: "原幣金額" },
+            { title: "兌換損益", field: "兌換損益" },
+            { title: "金額", field: "金額" },
+            { title: "支付方式", field: "支付方式" },
+            { title: "電匯銀行", field: "電匯銀行" },
+            { title: "退回維護日", field: "退回維護日" },
+            { title: "郵寄日", field: "郵寄日" },
         ],
     });
     </script>
