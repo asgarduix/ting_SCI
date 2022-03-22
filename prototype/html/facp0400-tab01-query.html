@@ -219,9 +219,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="facp0400-tab01-query.html" class="unittab-active">信用卡授權書報表</a></li>
-                                        <li><a href="facp0400-tab02-query.html">信用卡授權書<br>繳回簽收作業</a></li>
-                                        <li><a href="facp0400-tab03-query.html">信用卡授權書<br>簽收查詢</a></li>
+                                        <li><a href="facp0400-tab01-query.html" class="unittab-active">信用卡授權書<br>繳回簽收作業</a></li>
+                                        <li><a href="facp0400-tab02-query.html">信用卡授權書<br>簽收查詢</a></li>
+                                        <li><a href="facp0400-tab03-query.html">信用卡授權書報表</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -257,8 +257,16 @@
                                                 <div class="query-field-item query-field-title">保單註別</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
-                                                        <option value="">全部</option>
+                                                        <option value="">整批</option>
                                                     </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">訂單號碼</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <input type="text" placeholder="請輸入值" name="訂單號碼" title="" data-toggle="tooltip" data-placement="top">
                                                 </div>
                                             </div>
                                         </div>
@@ -317,7 +325,7 @@
                                                 <div class="query-field-item query-field-title">篩選條件</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="" id="">
-                                                        <option value="">全部</option>
+                                                        <option value="">未繳回</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -338,17 +346,52 @@
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
                                         </ul>
                                     </div>
-                                    <div class="content-btn-secondary">
+                                    <div class="content-btn-third">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>明細表列印</span></button></li>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>訂單明細表列印</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>存檔</span></button></li>
+                                            <li><button class="content-btn-item btn-third"><span>退件</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
-                        
+                        <!-- tabulator創立table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">15</li>
+                                                        <li class="count-check">12</li>
+                                                        <li class="count-error">修改上限不得超過2筆！</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table01"></div>
+                                    <div class="table-footer">table-footer</div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -526,14 +569,14 @@
 <script src="js/pg.js"></script>
 <script>
     var table01Data = [{
+        checkbox: "checkbox",
         訂單號碼: "設計文字",
-        流水號: "設計文字",
-        信用卡號: "設計文字",
-        刷卡金額: "設計文字",
+        金額: "設計文字",
         持卡人姓名: "設計文字",
-        舊持卡人姓名: "設計文字",
-        持卡人更正原因: "設計文字",
-        列舉關係: "設計文字"
+        授權人員姓名: "設計文字",
+        退貨日: "設計文字",
+        取消授權日: "設計文字",
+        退件原因: "設計文字"
     }, ];
     var table01 = new Tabulator("#table01", {
         data: table01Data,
@@ -550,14 +593,14 @@
         tooltipGenerationMode: "hover",
         selectable: true,
         columns: [
+            { title: "checkbox", field: "checkbox" },
             { title: "訂單號碼", field: "訂單號碼" },
-            { title: "流水號", field: "流水號" },
-            { title: "信用卡號", field: "信用卡號" },
-            { title: "刷卡金額", field: "刷卡金額" },
+            { title: "金額", field: "金額" },
             { title: "持卡人姓名", field: "持卡人姓名" },
-            { title: "舊持卡人姓名", field: "舊持卡人姓名" },
-            { title: "持卡人更正原因", field: "持卡人更正原因" },
-            { title: "列舉關係", field: "列舉關係" },
+            { title: "授權人員姓名", field: "授權人員姓名" },
+            { title: "退貨日", field: "退貨日" },
+            { title: "取消授權日", field: "取消授權日" },
+            { title: "退件原因", field: "退件原因" },
         ],
     });
     </script>

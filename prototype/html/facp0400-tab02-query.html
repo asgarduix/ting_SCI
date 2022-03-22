@@ -219,9 +219,9 @@
                                 <!-- unitTab -->
                                 <div class="content-component content-unittab">
                                     <ul>
-                                        <li><a href="facp0400-tab01-query.html">信用卡授權書報表</a></li>
-                                        <li><a href="facp0400-tab02-query.html" class="unittab-active">信用卡授權書<br>繳回簽收作業</a></li>
-                                        <li><a href="facp0400-tab03-query.html">信用卡授權書<br>簽收查詢</a></li>
+                                        <li><a href="facp0400-tab01-query.html">信用卡授權書<br>繳回簽收作業</a></li>
+                                        <li><a href="facp0400-tab02-query.html" class="unittab-active">信用卡授權書<br>簽收查詢</a></li>
+                                        <li><a href="facp0400-tab03-query.html">信用卡授權書報表</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -259,14 +259,6 @@
                                                     <select name="" id="">
                                                         <option value="">整批</option>
                                                     </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">訂單號碼</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <input type="text" placeholder="請輸入值" name="訂單號碼" title="" data-toggle="tooltip" data-placement="top">
                                                 </div>
                                             </div>
                                         </div>
@@ -346,16 +338,33 @@
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
                                         </ul>
                                     </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third"><span>存檔</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>退件</span></button></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <hr class="seperate-line">
+                        <!-- label -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-label">
+                                <!-- label -->
+                                <div class="content-component content-label">
+                                    <div class="label-inner">
+                                        <div class="label-item">
+                                            <div class="label-title">已繳回筆數</div>
+                                            <div class="label-content label-content-counter">5</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">未繳回筆數</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">總筆數</div>
+                                            <div class="label-content label-content-counter">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- tabulator創立table -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -573,10 +582,13 @@
         訂單號碼: "設計文字",
         金額: "設計文字",
         持卡人姓名: "設計文字",
+        金額: "設計文字",
         授權人員姓名: "設計文字",
-        退貨日: "設計文字",
-        取消授權日: "設計文字",
-        退件原因: "設計文字"
+        簽收日期: "設計文字",
+        簽收人員姓名: "設計文字",
+        退件日期: "設計文字",
+        退件原因: "設計文字",
+        退件人員姓名: "設計文字"
     }, ];
     var table01 = new Tabulator("#table01", {
         data: table01Data,
@@ -597,10 +609,13 @@
             { title: "訂單號碼", field: "訂單號碼" },
             { title: "金額", field: "金額" },
             { title: "持卡人姓名", field: "持卡人姓名" },
+            { title: "金額", field: "金額" },
             { title: "授權人員姓名", field: "授權人員姓名" },
-            { title: "退貨日", field: "退貨日" },
-            { title: "取消授權日", field: "取消授權日" },
+            { title: "簽收日期", field: "簽收日期" },
+            { title: "簽收人員姓名", field: "簽收人員姓名" },
+            { title: "退件日期", field: "退件日期" },
             { title: "退件原因", field: "退件原因" },
+            { title: "退件人員姓名", field: "退件人員姓名" },
         ],
     });
     </script>
