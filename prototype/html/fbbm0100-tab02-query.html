@@ -725,11 +725,11 @@
                                 <!-- tab-link -->
                                 <div class="content-component content-tab-link">
                                     <ul>
-                                        <li><a href="#">保單明細</a></li>
-                                        <li><a href="#" class="tab-link-active">票據憑證</a></li>
-                                        <li><a href="#">信用卡憑證</a></li>
-                                        <li><a href="#">銀存憑證</a></li>
-                                        <li><a href="#">現金憑證</a></li>
+                                        <li><a href="fbbm0100-tab01-query.html">保單明細</a></li>
+                                        <li><a href="fbbm0100-tab02-query.html" class="tab-link-active">票據憑證</a></li>
+                                        <li><a href="fbbm0100-tab03-query.html">信用卡憑證</a></li>
+                                        <li><a href="fbbm0100-tab04-query.html">銀存憑證</a></li>
+                                        <li><a href="fbbm0100-tab05-query.html">現金憑證</a></li>
                                         <li><a href="#">暫收支付</a></li>
                                         <li><a href="#">暫收支付修改</a></li>
                                         <li><a href="#">暫收抵繳</a></li>
@@ -1049,26 +1049,8 @@
         到期日: "設計文字",
         收費日郵戳日: "設計文字",
         付款行: "設計文字",
-        電匯銀行名稱: "設計文字",
-        退回維護日: "設計文字",
-        郵寄日: "設計文字",
-        票據兌現日: "設計文字",
-        票據轉雜收日: "設計文字",
-        帳號票號: "設計文字",
-        郵匯費: "設計文字",
-        支付對象ID: "設計文字",
-        支付對象: "設計文字",
-        地址: "設計文字",
-        無法清理之樣態: "設計文字",
-        銀行退回手續費: "設計文字",
-        付款行: "設計文字",
-        付款帳號: "設計文字",
-        更新日期: "設計文字",
-        建檔日期: "設計文字",
-        操作人員: "設計文字",
-        新暫收號: "設計文字",
-        新暫收日: "設計文字",
-        新暫收序號: "設計文字"
+        發票人帳號: "設計文字",
+        票據建檔日: "設計文字"
     }, ]
     var table2 = new Tabulator("#table2", {
         data: table2Data,
@@ -1095,26 +1077,8 @@
             { title: "收費日/郵戳日", field: "收費日/郵戳日" },
             { title: "暫收序號", field: "暫收序號" },
             { title: "付款行", field: "付款行" },
-            { title: "電匯銀行名稱", field: "電匯銀行名稱" },
-            { title: "退回維護日", field: "退回維護日" },
-            { title: "郵寄日", field: "郵寄日" },
-            { title: "票據兌現日", field: "票據兌現日" },
-            { title: "票據轉雜收日", field: "票據轉雜收日" },
-            { title: "帳號/票號", field: "帳號票號" },
-            { title: "郵匯費", field: "郵匯費" },
-            { title: "支付對象ID", field: "支付對象ID" },
-            { title: "支付對象", field: "支付對象" },
-            { title: "地址", field: "地址" },
-            { title: "無法清理之樣態", field: "無法清理之樣態" },
-            { title: "銀行退回手續費", field: "銀行退回手續費" },
-            { title: "付款行", field: "付款行" },
-            { title: "付款帳號", field: "付款帳號" },
-            { title: "更新日期", field: "更新日期" },
-            { title: "建檔日期", field: "建檔日期" },
-            { title: "操作人員", field: "操作人員" },
-            { title: "新暫收號", field: "新暫收號" },
-            { title: "新暫收日", field: "新暫收日" },
-            { title: "新暫收序號", field: "新暫收序號" },
+            { title: "發票人帳號", field: "發票人帳號" },
+            { title: "票據建檔日", field: "票據建檔日" },
         ],
     });
     </script>
