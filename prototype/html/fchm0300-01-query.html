@@ -163,14 +163,6 @@
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">轉檔單位</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <div class="entry-combine"><input type="date" id="credit_rating_date" name="暫收日" title="" data-toggle="tooltip" data-placement="top"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">暫收款來源</div>
-                                                <div class="query-field-item query-field-entry">
                                                     <select>
                                                         <option>全部</option>
                                                         <option></option>
@@ -180,46 +172,79 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">險別</div>
+                                                <div class="query-field-item query-field-title">付款來源</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select>
-                                                        <option>車險</option>
+                                                        <option>退保費</option>
                                                         <option></option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">審核日</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核起日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核訖日" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">暫收款代號</div>
+                                                <div class="query-field-item query-field-title">保管單位</div>
                                                 <div class="entry-inner">
-                                                    <div class="entry-combine query-field-entry entry-4">
+                                                    <div class="entry-combine query-field-entry">
                                                         <select>
                                                             <option></option>
                                                             <option></option>
                                                         </select>
                                                     </div>
-                                                    <div class="entry-combine query-field-entry entry-6">
-                                                        <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-input query-input-half">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">經手人代號</div>
+                                                <div class="query-field-item query-field-title">保管經手人</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine query-field-entry entry-4">
+                                                        <div class="entry-combine entry-6">
                                                             <select>
                                                                 <option></option>
                                                                 <option></option>
                                                             </select>
                                                         </div>
-                                                        <div class="entry-combine query-field-entry entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-4">
+                                                            <button class="btn-prime">匯入</button>
+                                                            <button class="btn-prime">匯入指定保管經手人</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">款項成立日期</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核起日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核訖日" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,14 +252,25 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">執行狀態</div>
+                                                <div class="query-field-item query-field-title">有無結案</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select>
-                                                        <option>建立</option>
-                                                        <option>未銷帳</option>
-                                                        <option>已銷帳</option>
-                                                        <option>結案不付</option>
-                                                    </select>
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="作業項目"><label for="rd01">有</label></li>
+                                                        <li><input type="radio" id="rd02" name="作業項目"><label for="rd02">無</label></li>
+                                                        <li><input type="radio" id="rd03" name="作業項目"><label for="rd03">全部</label></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">有無新往來</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01-2" name="作業項目"><label for="rd01-2">有</label></li>
+                                                        <li><input type="radio" id="rd02-2" name="作業項目"><label for="rd02-2">無</label></li>
+                                                        <li><input type="radio" id="rd03-2" name="作業項目"><label for="rd03-2">全部</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -242,28 +278,27 @@
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">退款處理狀態</div>
+                                                <div class="query-field-item query-field-title">新往來資料比對日</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <select>
-                                                        <option>未處理</option>
-                                                        <option>批次處理</option>
-                                                        <option>單筆處理</option>
-                                                        <option>駁回</option>
-                                                        <option>已付</option>
-                                                    </select>
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01-3" name="作業項目"><label for="rd01-3">有</label></li>
+                                                        <li><input type="radio" id="rd02-3" name="作業項目"><label for="rd02-3">無</label></li>
+                                                        <li><input type="radio" id="rd03-3" name="作業項目"><label for="rd03-3">全部</label></li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">繳款人</div>
+                                                <div class="query-field-item query-field-title">原款項成立日期</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="繳款人" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核起日" value="" title="" data-toggle="tooltip" data-placement="top">
                                                         </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        <div class="entry-combine entry-1">～</div>
+                                                        <div class="entry-combine entry-45">
+                                                            <input type="date" name="審核訖日" data-toggle="tooltip" data-placement="top">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -271,15 +306,15 @@
                                         </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">要保人</div>
+                                                <div class="query-field-item query-field-title">結案單審理狀態</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="要保人" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
+                                                        <select>
+                                                            <option>退件</option>
+                                                            <option>補正</option>
+                                                            <option>財務補郵簡</option>
+                                                            <option>審理中</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -288,30 +323,15 @@
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">被保險人</div>
+                                                <div class="query-field-item query-field-title">單筆查詢</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="被保險人" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">退款對象</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="退款對象" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
+                                                        <select>
+                                                            <option>暫收</option>
+                                                            <option>支票號碼</option>
+                                                            <option>支付對象姓名</option>
+                                                            <option>支付ID/統編</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>

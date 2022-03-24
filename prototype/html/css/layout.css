@@ -1554,12 +1554,12 @@ a.menu-active .menu-bar {
 
 .count-money::before {
     content: "合計";
-    margin-right: 3px;  
+    margin-right: 3px;
 }
 
 .count-money::after {
     content: "元";
-    margin-left: 3px;  
+    margin-left: 3px;
 }
 
 .func-filter {
@@ -1683,11 +1683,11 @@ a.menu-active .menu-bar {
 
 /* nest table */
 .table-subtable-container {
-    padding: 5px;
+    padding: 5px 5px 10px;
     background: #EAF9FF;
     border-right: #aaa solid 1px;
     border-top: #aaa solid 1px;
-    border-bottom: #aaa solid 1px;
+    border-bottom: #b2a38c solid 3px;
 }
 
 .table-btn-switch {
@@ -1849,7 +1849,6 @@ a.menu-active .menu-bar {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.875rem;
-    height: 24px;
 }
 
 .condition-1 {
@@ -2537,7 +2536,6 @@ a.menu-active .menu-bar {
     border-radius: 4px;
     padding: 2px 4px;
     font-size: 0.875rem;
-    height: 24px;
 }
 
 .query-field-entry select {
@@ -2579,11 +2577,16 @@ a.menu-active .menu-bar {
 
 .entry-combine {
     display: table-cell;
+    vertical-align: middle;
     padding-right: 3px;
 }
 
 .entry-combine:nth-last-child(1) {
     padding-right: 0;
+}
+
+.hack {
+    height: 0;
 }
 
 .entry-center {
@@ -2708,7 +2711,7 @@ a.menu-active .menu-bar {
 }
 
 .query-input-upload button {
-    height: 24px;
+    height: 25px;
     font-size: 0.875rem;
     background: #026D93;
     color: #fff;
@@ -2845,7 +2848,7 @@ a.menu-active .menu-bar {
 }
 
 .dialog-content {
-    max-width: 1090px;
+    max-width: 1190px;
     padding: 10px 5px;
 }
 
@@ -2967,8 +2970,8 @@ a.menu-active .menu-bar {
 
 /* 新增 */
 .popup-dialog-add {
-    width: 1090px;
-    max-width: 1090px;
+    width: 1190px;
+    max-width: 1190px;
 }
 
 .popup-dialog-add .dialog-header {
@@ -3353,8 +3356,8 @@ a.menu-active .menu-bar {
 .customize-form-title {
     padding: 0 3px 0 0;
     text-align: right;
-    width: 90px;
-    max-width: 90px;
+    width: 105px;
+    max-width: 105px;
     word-break: break-all;
     background: #F2EDE6;
     line-height: 1.1;
@@ -4232,6 +4235,7 @@ span.tp {
     width: 280px;
     max-width: 280px;
 }
+
 /* END: customize-form */
 /* START:  燈號 */
 .content-hint {
@@ -4295,6 +4299,7 @@ span.tp {
     background: transparent;
     /*border: rgba(255, 255, 255, .2) solid 1px;*/
 }
+
 /* END:  燈號 */
 
 /* START: info-block */
@@ -4342,19 +4347,9 @@ span.tp {
 }
 
 .info-block-item li {
-    /*display: inline-block;*/
     display: table-cell;
     vertical-align: top;
     padding: 0 4px;
-}
-
-.info-block-item li span:nth-child(1) {}
-
-.info-block-item li span[icon]::after {
-    content: attr(icon);
-    /*padding: 0 10px;*/
-    display: inline-block;
-    color: #777;
 }
 
 .info-block-item li span {
@@ -4373,9 +4368,15 @@ span.tp {
     padding: 0 2px;
 }
 
-.info-block-item li span:nth-child(2)::before {
-    content: "$";
+.info-block-item li span[icon-before]::before {
+    content: attr(icon-before);
     margin-right: 2px;
+}
+
+.info-block-item li span[icon-after]::after {
+    content: attr(icon-after);
+    display: inline-block;
+    color: #777;
 }
 
 .total-minus {
@@ -4462,6 +4463,30 @@ span.tp {
 /* 費用計算 */
 .content-info-cash-1 .info-block-item ul {
     width: 100%;
+    padding: 4px 0;
+    border-top: rgba(140, 182, 219, .7) solid 1px;
+}
+
+.content-info-cash-1 .info-block-item ul:nth-child(1) {
+    border-top: none;
+}
+
+.content-info-cash-1 .info-block-item li.group-title {
+    width: 35px;
+    position: relative;
+}
+
+.content-info-cash-1 .info-block-item li.group-title span {
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 3px;
+    font-weight: normal;
+    background-color: #026D93;
+    border-radius: 3px;
+    color: #fff;
+    position: absolute;
+    bottom: 3px;
 }
 
 /* END: info-block */
@@ -4919,6 +4944,7 @@ span.tp {
 .status-color-bad {
     color: #F33349 !important;
 }
+
 /* START: status */
 /* START: content-selector */
 .content-selector {
@@ -4937,6 +4963,7 @@ span.tp {
     font-weight: bold;
     color: #027DB4;
 }
+
 /* END: content-selector */
 @media only screen and (max-width: 1280px) {
 
