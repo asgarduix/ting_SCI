@@ -786,7 +786,71 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+    <!-- popup-add -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-add">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">退件原因</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    
+                    <!-- customize-form -->
+                    <div class="customize-form">
+                        
+                        <!-- 總行代號/銀行代號/銀行統編/銀行電話 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">退件原因</div>
+                                        <div class="customize-form-entry">
+                                            <div class="customize-form-entry-container">
+                                                <div class="customize-form-entry-col customize-form-entry-2">
+                                                    <select name="利息進位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                        <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-8">
+                                                    <input type="text" name="退件原因" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 銀行地址 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-3">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">備註</div>
+                                        <div class="customize-form-entry"><input type="text" name="銀行電話" value="" title="" placeholder="請輸入值"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">儲存</button></li>
+                        <li><button class="btn-outline">關閉</button></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -923,7 +987,7 @@
     }, ];
     var table2 = new Tabulator("#table2", {
         data: table2Data,
-        // autoColumns: true,
+        autoColumns: true,
         layout: "fitColumns",
         height: "255px",
         pagination: "local",
@@ -935,31 +999,8 @@
         tooltipsHeader: true,
         tooltipGenerationMode: "hover",
         selectable: true,
-        columns: [{
-                formatter: "rowSelection",
-                titleFormatter: "rowSelection",
-                headerHozAlign: "center",
-                hozAlign: "center",
-                headerSort: false,
-                maxWidth: 30,
-                minWidth: 30,
-                cellClick: function(e, cell) {
-                    cell.getRow().toggleSelect();
-                }
-            },
-            { title: "匯入支票號碼", field: "匯入支票號碼" },
-            { title: "匯入暫收號/暫收日/暫收序", field: "匯入暫收號/暫收日/暫收序" },
-            { title: "溢收款項種類", field: "溢收款項種類" },
-            { title: "保管大單位", field: "保管大單位" },
-            { title: "保管小單位", field: "保管小單位" },
-            { title: "保管經手人代號", field: "保管經手人代號" },
-            { title: "保管經手人", field: "保管經手人" },
-            { title: "退款性質", field: "退款性質" },
-            { title: "原開票日", field: "原開票日" },
-            { title: "原支票號碼", field: "原支票號碼" },
-            { title: "原票據金額", field: "原票據金額" },
-            { title: "原賠付對象", field: "原賠付對象" },
-            { title: "原賠付ID", field: "原賠付ID" },
+        columns: [
+            
         ],
     });
     </script>

@@ -1601,7 +1601,7 @@ a.menu-active .menu-bar {
 }
 
 .content-table .tabulator {
-    border: #aaa solid 1px;
+    /*border: #aaa solid 1px;*/
     border-right: none;
     background: #aaa;
 }
@@ -1683,11 +1683,15 @@ a.menu-active .menu-bar {
 
 /* nest table */
 .table-subtable-container {
-    padding: 5px 5px 10px;
+    /*padding: 5px 5px 10px;*/
+    /*padding: 0 0 7px;*/
     background: #EAF9FF;
-    border-right: #aaa solid 1px;
-    border-top: #aaa solid 1px;
-    border-bottom: #b2a38c solid 3px;
+    border: none;
+    border-bottom: #aaa solid 3px;
+    /*border-right: #777 solid 4px;
+    border-left: #777 solid 4px;
+    border-top: #aaa solid 5px;
+    border-bottom: #aaa solid 5px;*/
 }
 
 .table-btn-switch {
@@ -1704,7 +1708,8 @@ a.menu-active .menu-bar {
 }
 
 .table-subtable-container .tabulator .tabulator-header {
-    background: #F7F2EB;
+    background: #f0ebf7;
+    /*background: #F7F2EB;*/
     color: #111;
 }
 
@@ -2955,6 +2960,18 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
+/* 預覽圖檔 */
+.popup-dialog-image {
+    width: 720px;
+    max-width: 720px;
+}
+
+.popup-dialog-image .dialog-header {
+    background: #018dcd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 /* 上傳異常 */
 /* 刪除 */
 .popup-dialog-error {
@@ -2980,9 +2997,9 @@ a.menu-active .menu-bar {
     border-top-right-radius: 10px;
 }
 
-.popup-dialog-add .content-table {
+/*.popup-dialog-add .content-table {
     padding: 0;
-}
+}*/
 
 /* 有輸入的跳窗 */
 .dialog-entry {
@@ -3015,9 +3032,9 @@ a.menu-active .menu-bar {
 }
 
 /* table */
-.dialog-content .detail-board {
+/*.dialog-content .detail-board {
     padding: 5px;
-}
+}*/
 
 /* 跳窗頁籤 */
 .dialog-content-tab {
@@ -3166,6 +3183,103 @@ a.menu-active .menu-bar {
     position: absolute;
     border: #aaa solid 1px;
     z-index: 5;
+}
+
+/* 圖片清單 */
+.dialog-image-list {
+    border-left: #aaa solid 1px;
+    border-top: #aaa solid 1px;
+    overflow: auto;
+}
+
+.dialog-image-title {
+    padding: 0 0 4px 0;
+    color: #333;
+}
+
+.dialog-image-title span {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.dialog-image-title span::before {
+    font-family: 'Material Icons';
+    content: "arrow_right";
+    font-feature-settings: 'liga';
+    vertical-align: top;
+    color: #018dcd;
+    text-align: left;
+    width: 18px;
+    display: inline-block;
+}
+
+.dialog-image-item {
+    border-right: #aaa solid 1px;
+    border-bottom: #aaa solid 1px;
+    width: 33.33333%;
+    float: left;
+    padding: 4px;
+}
+
+.dialog-image-item-id {
+    font-size: 0.45rem;
+    line-height: 1.1;
+    color: #777;
+    padding: 0 1px;
+}
+
+.dialog-image-item-name {
+    font-weight: bold;
+    padding: 0 1px;
+}
+
+.dialog-image-item-print {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: #ddd solid 1px;
+    border-radius: 2px;
+}
+
+.dialog-image-item-print span {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    border: #eee solid 1px;
+}
+
+.dialog-image-item-print span::after {
+    content: attr(text);
+    display: block;
+    width: 80%;
+    color: #aaa;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog-image-title button {
+    border: #aaa solid 1px;
+    margin-left: 5px;
+    line-height: 1;
+    border-radius: 4px;
+    padding: 2px 4px;
+    letter-spacing: 0.1rem;
+    vertical-align: text-top;
+}
+
+.dialog-image-title button:hover {
+    background: #ccc;
 }
 
 /* END: popup */
@@ -3566,6 +3680,7 @@ a.menu-active .menu-bar {
 .customize-form-row-btn .customize-form-field:nth-last-child(1) {
     width: 60px;
     position: relative;
+    border: none;
 }
 
 .customize-form-row-btn .customize-form-field button.field-btn {
@@ -3619,8 +3734,12 @@ a.menu-active .menu-bar {
 }
 
 /* 圖像上傳 */
-.customize-form-upload {
+/*.customize-form-upload {
     border-bottom: #aaa solid 1px;
+}*/
+
+.customize-form-desc {
+    border-top: #aaa solid 1px;
 }
 
 .customize-form-upload-inner {
@@ -3634,6 +3753,10 @@ a.menu-active .menu-bar {
     vertical-align: middle;
     font-size: 0.875rem;
     color: #026D93;
+}
+
+.dialog-content .customize-form-upload-item p {
+    padding: 0;
 }
 
 .customize-form-upload-title {
@@ -4492,7 +4615,8 @@ span.tp {
 /* END: info-block */
 /* START: tab-link */
 .content-tab-link {
-    padding: 0 0 8px;
+    /*padding: 0 0 8px;*/
+    padding: 3px 10px;
     margin-right: 0;
 }
 
@@ -4527,6 +4651,23 @@ span.tp {
     background: #e0ecff;
     color: #483dcc;
     border-color: #e0ecff;
+}
+
+.content-tab-link a span {
+    font-size: 0.875rem;
+}
+
+.content-tab-link a span::before {
+    content: "(";
+    font-size: 0.875rem;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.content-tab-link a span::after {
+    content: ")";
+    font-size: 0.875rem;
+    margin-left: 1px;
 }
 
 /* END: tab-link */
