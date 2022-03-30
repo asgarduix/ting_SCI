@@ -2793,6 +2793,13 @@ a.menu-active .menu-bar {
     content: "$";
 }
 
+/*.detail-board .content-label {
+    padding: 5px 10px 0;
+}*/
+
+.seperate-line-tiny~.content-label {
+    padding: 5px 10px 0;
+}
 /* END: label */
 /* START: popup */
 .content-popup {
@@ -5106,6 +5113,12 @@ span.tp {
 }
 
 /* END: content-selector */
+/* START: 資訊磚 */
+.detail-board-info-block {
+    background: none;
+    border: none;
+}
+/* END: 資訊磚 */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
