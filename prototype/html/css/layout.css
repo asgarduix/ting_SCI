@@ -1019,6 +1019,11 @@ a.menu-active .menu-bar {
     table-layout: fixed;
 }
 
+.page-customize-form-double .card-multiple-container {
+    padding: 4px;
+    background: #ccc;
+}
+
 .card-table,
 .card-data {
     display: table-cell;
@@ -1143,6 +1148,37 @@ a.menu-active .menu-bar {
     color: #026D93;
     font-weight: bold;
     padding: 4px 10px;
+    border-bottom: #aaa dotted 1px;
+}
+
+.card-data-section-name span {
+    font-size: 0.875rem;
+    color: #026D93;
+    font-weight: bold;
+}
+
+.card-data-section-name span::before {
+    content: "：";
+    vertical-align: text-bottom;
+}
+
+.card-data-section-count {
+    padding: 4px 10px;
+}
+
+.card-data-section-count span {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.card-data-section-count span::before {
+    content: attr(icon-before);
+    margin-right: 2px;
+}
+
+.card-data-section-count span::after {
+    content: attr(icon-after);
+    margin-left: 2px;
 }
 
 .card-data-section {
@@ -1197,6 +1233,29 @@ a.menu-active .menu-bar {
 .card-data-section li.card-data-section-send {
     background: #eee;
     padding-top: 10px;
+}
+
+.card-data-section li a {
+    font-size: 0.875rem;
+    display: block;
+    text-decoration: none;
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+
+.card-data-section li a:hover {
+    background: #1c69bb;
+    color: #fff;
+}
+
+.card-data-section li a.card-data-section-active {
+    background: #1c69bb;
+    color: #fff;
+}
+
+.card-data-fixed {
+    max-height: 300px;
+    overflow: auto;
 }
 
 .card-data-section-send button {
@@ -3517,6 +3576,11 @@ a.menu-active .menu-bar {
     font-size: 0.75rem;
 }
 
+.customize-form-title-large {
+    width: 130px;
+    max-width: 130px;
+}
+
 .customize-form-entry {
     background: #fff;
     padding: 4px 3px;
@@ -3557,10 +3621,6 @@ a.menu-active .menu-bar {
     -ms-transform: translateY(-1px);
     -o-transform: translateY(-1px);
 }
-
-/*.customize-form-entry li>div {
-
-}*/
 
 .customize-form-entry label {
     margin-left: 1px;
@@ -4031,7 +4091,7 @@ a.menu-active .menu-bar {
     line-height: 1;
     padding: 2px 7px;
     border-radius: 4px;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 }
 
 .customize-form-field-delete button:hover {
@@ -4393,6 +4453,54 @@ span.tp {
     width: 280px;
     max-width: 280px;
 }
+
+/* 左右排版樣式：左側連結/右側塊狀資訊 */
+.page-customize-form-double .card-data-inner {
+    border: #bbb solid 1px;
+}
+
+.page-customize-form-double .card-data-left {
+    width: 170px;
+}
+
+.page-customize-form-double .card-data-right-inner {
+    max-height: 364px;
+    overflow: auto;
+}
+
+.page-customize-form-double .sub-form {
+    overflow: hidden;
+}
+
+.card-data-right .customize-form-row {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-data-right .customize-form-title {
+    width: 85px;
+    padding: 4px 3px;
+}
+
+.card-data-right .customize-form-inner,
+.card-data-right .customize-form-field:nth-child(1) .customize-form-title {
+    border-radius: 0;
+}
+
+.card-data-right .sub-form {
+    border: #bbb solid 1px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.card-data-right .sub-form:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.page-customize-form-double .customize-form-field-delete {
+    background: #f4fcf7;
+}
+
 
 /* END: customize-form */
 /* START:  燈號 */
