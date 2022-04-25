@@ -721,7 +721,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- tabulator創立table -->
+                        <!-- 自定義table -->
                         <div class="card-detail">
                             <!-- customize-form -->
                             <div class="customize-form page-customize-form">
@@ -731,7 +731,7 @@
                                     </div>
                                 </div>
                                 <!-- 現金金額/銀存金額/支票金額/信用卡金額 -->
-                                <div class="customize-form-row">
+                                <div class="customize-form-row row-mark">
                                     <div class="customize-form-inner">
                                         <div class="customize-form-field customize-form-field-1">
                                             <div class="customize-field-inner">
@@ -1500,6 +1500,349 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 左右排版樣式：左側連結/右側塊狀資訊 -->
+                        <div class="customize-form page-customize-form page-customize-form-double">
+                            <div class="customize-form-row">
+                                <div class="customize-form-header">
+                                    <span>保單資訊</span>
+                                </div>
+                            </div>
+                            <div class="card-multiple-container">
+                                <!-- data -->
+                                <div class="card-detail card-data card-data-left">
+                                    <div class="card-data-inner">
+                                        <div class="card-data-section-name">林娜鈴</div>
+                                        <div class="card-data-section-count"><span icon-before="共" icon-after="筆">8</span></div>
+                                        <div class="card-data-section card-data-fixed">
+                                            <ul>
+                                                <li><a href="#" class="card-data-section-active">A-123456</a></li>
+                                                <li><a href="#" class="card-data-section-active">B-123456</a></li>
+                                                <li><a href="#">C-123456</a></li>
+                                                <li><a href="#">D-123456</a></li>
+                                                <li><a href="#">E-123456</a></li>
+                                                <li><a href="#">F-123456</a></li>
+                                                <li><a href="#">G-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                                <li><a href="#">H-123456</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-detail card-table card-data-right">
+                                    <div class="card-data-right-inner">
+                                        <div class="sub-form">
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>移除</button></div>
+                                                </div>
+                                            </div>
+                                            <!-- 險種/保單號碼/批單號碼/ 序號/期別 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">險種</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="險種" value="車險" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">保單號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="保單號碼" value="81-11300036" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">批單號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="批單號碼" value="11E0600108" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">序號/期別</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-5">
+                                                                        <input type="text" name="序號" value="1" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-5">
+                                                                        <input type="text" name="期別" value="0" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 要保人ID/要保人/要保號碼 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保人ID</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保人ID" value="A223899839" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保人" value="林娜鈴" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保號碼" value="11E0600108" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 被保險ID/被保險人/業務來源 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">被保險ID</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險ID" value="A223899839" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">被保險人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險人" value="林娜鈴" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">業務來源</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                                        <input type="text" name="業務來源" value="A000055" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-6">
+                                                                        <input type="text" name="業務來源" value="匯豐協進保險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 經手人/洽覽人/原銷帳序號 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">經手人</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                                        <input type="text" name="經手人" value="001489" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-6">
+                                                                        <input type="text" name="經手人" value="吳芸宣" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">洽覽人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險人" value="215A 協進產物保險代理人股份有限公司" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">原銷帳序號</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="原銷帳序號" value="503" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sub-form">
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>移除</button></div>
+                                                </div>
+                                            </div>
+                                            <!-- 險種/保單號碼/批單號碼/ 序號/期別 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">險種</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="險種" value="車險" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">保單號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="保單號碼" value="81-11300036" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">批單號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="批單號碼" value="11E0600108" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">序號/期別</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-5">
+                                                                        <input type="text" name="序號" value="1" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-5">
+                                                                        <input type="text" name="期別" value="0" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 要保人ID/要保人/要保號碼 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保人ID</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保人ID" value="A223899839" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保人" value="林娜鈴" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">要保號碼</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="要保號碼" value="11E0600108" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 被保險ID/被保險人/業務來源 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">被保險ID</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險ID" value="A223899839" title="車險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">被保險人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險人" value="林娜鈴" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">業務來源</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                                        <input type="text" name="業務來源" value="A000055" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-6">
+                                                                        <input type="text" name="業務來源" value="匯豐協進保險" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 經手人/洽覽人/原銷帳序號 -->
+                                            <div class="customize-form-row">
+                                                <div class="customize-form-inner">
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">經手人</div>
+                                                            <div class="customize-form-entry">
+                                                                <div class="customize-form-entry-container">
+                                                                    <div class="customize-form-entry-col customize-form-entry-4">
+                                                                        <input type="text" name="經手人" value="001489" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                    <div class="customize-form-entry-col customize-form-entry-6">
+                                                                        <input type="text" name="經手人" value="吳芸宣" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-2">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">洽覽人</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="被保險人" value="215A 協進產物保險代理人股份有限公司" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="customize-form-field customize-form-field-1">
+                                                        <div class="customize-field-inner">
+                                                            <div class="customize-form-title">原銷帳序號</div>
+                                                            <div class="customize-form-entry">
+                                                                <input type="text" name="原銷帳序號" value="503" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -1730,7 +2073,7 @@ var table01 = new Tabulator("#table01", {
     ],
 });
 // 選擇預設勾選row
-table01.selectRow("b1");
+table01.selectRow(["b1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
 </script>

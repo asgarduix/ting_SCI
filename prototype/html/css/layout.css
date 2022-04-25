@@ -1094,6 +1094,10 @@ a.menu-active .menu-bar {
     margin-right: 3px;
 }
 
+.datal-total-row .data-row-content {
+    font-weight: bold;
+}
+
 .card-data-left {
     width: 265px;
     padding: 0 5px 0 0;
@@ -1295,6 +1299,11 @@ a.menu-active .menu-bar {
     position: relative;
 }
 
+.card-data-small {
+    width: 215px;
+    height: 255px;
+}
+
 /* END: card */
 /* START: card-detail >> board */
 .detail-board {
@@ -1320,6 +1329,10 @@ a.menu-active .menu-bar {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     overflow: hidden;
+}
+
+.customize-form-row-multiple .detail-board {
+    border: none;
 }
 
 /* END: card-detail >> board */
@@ -1682,6 +1695,7 @@ a.menu-active .menu-bar {
     color: #fff;
 }
 
+
 .content-table .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
     background: #027DB4;
 }
@@ -1689,6 +1703,11 @@ a.menu-active .menu-bar {
 .content-table .tabulator .tabulator-header .tabulator-col {
     background: none;
     font-weight: normal;
+}
+
+.form-content-table .tabulator .tabulator-header {
+    background: #F2EDE6;
+    color: #111;
 }
 
 .content-table .tabulator div,
@@ -1834,6 +1853,9 @@ a.menu-active .menu-bar {
     position: relative;
     background: #fff;
     border: #aaa solid 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .tabulator-select-editable .table-select-inner::after {
@@ -2641,7 +2663,6 @@ a.menu-active .menu-bar {
 
 .query-field-entry li {
     display: inline-block;
-    vertical-align: middle;
     margin-right: 4px;
 }
 
@@ -3481,6 +3502,12 @@ a.menu-active .menu-bar {
     background: #027bb3;
 }
 
+.customize-form-header-multiple span span:nth-child(1)::after {
+    content: "|";
+    margin: 0 4px;
+    vertical-align: text-bottom;
+}
+
 .sub-form {
     border-bottom: #bbb solid 8px;
 }
@@ -3492,6 +3519,9 @@ a.menu-active .menu-bar {
 .customize-form-inner {
     overflow: hidden;
     background: #f7f7f7;
+}
+
+.customize-form-row:nth-last-child(1) .customize-form-inner {
     border-radius: 4px;
 }
 
@@ -3536,10 +3566,10 @@ a.menu-active .menu-bar {
     width: 100%;
 }
 
-.customize-form-field:nth-child(1) .customize-form-title {
+/*.customize-form-field:nth-child(1) .customize-form-title {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-}
+}*/
 
 .customize-field-inner {
     width: 100%;
@@ -3607,7 +3637,7 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
-    vertical-align: top;
+    /*vertical-align: sub;*/
 }
 
 .customize-form-entry input[type="radio"],
@@ -3633,6 +3663,10 @@ a.menu-active .menu-bar {
     padding-top: 2px;
 }
 
+.customize-form-entry span input[type='text'] {
+    margin-bottom: 0;
+}
+
 .customize-form-entry li div {
     display: table;
     table-layout: fixed;
@@ -3655,7 +3689,14 @@ a.menu-active .menu-bar {
 .customize-form-entry-col {
     float: left;
     padding: 0 3px;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.customize-form-entry-col span {
+    display: block;
+    height: 24px;
+    font-size: 0.875rem;
+    text-align: right;
 }
 
 .customize-form-entry-col:nth-child(1) {
@@ -3664,6 +3705,10 @@ a.menu-active .menu-bar {
 
 .customize-form-entry-col:nth-last-child(1) {
     padding-right: 0;
+}
+
+.customize-form-entry-col .func-download {
+    border: none;
 }
 
 .customize-form-entry-inner {
@@ -4457,6 +4502,7 @@ span.tp {
 /* 左右排版樣式：左側連結/右側塊狀資訊 */
 .page-customize-form-double .card-data-inner {
     border: #bbb solid 1px;
+    height: 100%;
 }
 
 .page-customize-form-double .card-data-left {
@@ -4501,6 +4547,14 @@ span.tp {
     background: #f4fcf7;
 }
 
+.row-mark .customize-form-entry {
+    background: #bbfeb5;
+}
+
+.row-mark .customize-form-title {
+    font-weight: bold;
+    background: #81F677;
+}
 
 /* END: customize-form */
 /* START:  燈號 */
@@ -5265,6 +5319,9 @@ span.tp {
     .section-to-print,
     .section-to-print * {
         visibility: visible;
+        /* 設定列印開啟背景圖 */
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
     }
 
     .section-to-print {
