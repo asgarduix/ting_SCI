@@ -2264,7 +2264,6 @@ a.menu-active .menu-bar {
 
 .content-btn li {
     display: inline-block;
-    vertical-align: middle;
     margin-right: 4px;
 }
 
@@ -2987,6 +2986,16 @@ a.menu-active .menu-bar {
 
 .dialog-content p span.dialog-count::before {
     content: "：";
+}
+
+.dialog-content p i {
+    font-size: 0.875rem;
+}
+
+.dialog-content p i::after {
+    content: attr(after-icon);
+    display: inline-block;
+    margin: 0 2px;
 }
 
 .dialog-content-image {
