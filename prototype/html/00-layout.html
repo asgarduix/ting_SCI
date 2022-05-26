@@ -114,7 +114,6 @@
                                     <option>銀資管理：陳怡芳(ABC12345)</option>
                                 </select>
                             </li>
-                            <li class="header-info-time"><span>time</span></li>
                             <li class="header-info-logout"><a href="javascript:;">登出</a></li>
                         </ul>
                     </div>
@@ -311,6 +310,7 @@
                                                     <ul>
                                                         <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01">報表</label></li>
                                                         <li><input type="checkbox" id="cb02" name="作業項目"><label for="cb02">維護</label></li>
+                                                        <li><input type="checkbox" id="cb03" name="作業項目"><label for="cb03">測試1</label></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -473,7 +473,7 @@
                                     </div>
                                     <!-- 洽攬人代碼 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input query-input-half">
+                                        <div class="query-field query-input query-input-half query-input-combine">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">洽攬人代碼</div>
                                                 <div class="query-field-item query-field-entry">
@@ -513,7 +513,7 @@
                                     </div>
                                     <!-- 上傳檔案 -->
                                     <div class="query-row">
-                                        <div class="query-field query-double-input query-input-half query-input-upload">
+                                        <div class="query-field query-double-input query-input-half query-input-upload query-input-combine">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">上傳檔案</div>
                                                 <div class="query-field-item query-field-entry">
@@ -635,20 +635,20 @@
                             <!-- card-detail >> board -->
                             <div class="detail-board detail-board-info-block">
                                 <!-- info-block  -->
-                                <div class="content-component content-info-block content-info-cash content-info-cash-1">
+                                <div class="content-component content-info-block content-info-cash content-info-cash-1 content-info-cash-num">
                                     <div class="content-info-block-inner">
                                         <div class="info-block-item">
                                             <div class="info-block-item-inner">
                                                 <ul>
                                                     <li class="group-title"><span>金額</span></li>
-                                                    <li><span>總保單</span><span icon-before="$" icon-after="－">1,000,000</span></li>
-                                                    <li><span>票據憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
-                                                    <li><span>信用卡憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
-                                                    <li><span>銀存憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
-                                                    <li><span>現金憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
-                                                    <li><span>暫收抵款</span><span icon-before="$" icon-after="－">100,000</span></li>
-                                                    <li><span>抵繳保費</span><span icon-before="$" icon-after="＝">100,000</span></li>
-                                                    <li><span>借貸平衡</span><span icon-before="$">400,000</span></li>
+                                                    <li count-num="1"><span>總保單</span><span icon-before="$" icon-after="－">1,000,000</span></li>
+                                                    <li count-num="2"><span>票據憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                    <li count-num="3"><span>信用卡憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                    <li count-num="4"><span>銀存憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                    <li count-num="5"><span>現金憑證</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                    <li count-num="6"><span>暫收抵款</span><span icon-before="$" icon-after="－">100,000</span></li>
+                                                    <li count-num="7"><span>抵繳保費</span><span icon-before="$" icon-after="-">100,000</span></li>
+                                                    <li count-num="8"><span>借貸平衡</span><span icon-before="$" icon-after="＝">400,000</span></li>
                                                 </ul>
                                                 <ul>
                                                     <li class="group-title"><span>數量</span></li>
@@ -684,8 +684,8 @@
                                             <div class="info-block-item-inner">
                                                 <ul>
                                                     <li><span>特別準備金</span><span icon-before="$" icon-after="-">1,507,390,361</span></li>
-                                                    <li><span>定存單</span><span icon-before="$" icon-after="=">1,507,833,238</span></li>
-                                                    <li><span>定存單差額</span><span class="total-minus" icon-before="$">-442,877</span></li>
+                                                    <li><span>定存單</span><span icon-before="$" icon-after="-">1,507,833,238</span></li>
+                                                    <li><span>定存單差額</span><span class="total-minus" icon-before="$" icon-after="=">-442,877</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -693,8 +693,8 @@
                                             <div class="info-block-item-inner">
                                                 <ul>
                                                     <li><span>非特別準備金</span><span icon-before="$" icon-after="-">1,507,390,361</span></li>
-                                                    <li><span>定存單</span><span icon-before="$" icon-after="=">488,500,000</span></li>
-                                                    <li><span>定存單差額</span><span icon-before="$">0</span></li>
+                                                    <li><span>定存單</span><span icon-before="$" icon-after="-">488,500,000</span></li>
+                                                    <li><span>定存單差額</span><span icon-before="$" icon-after="=">0</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1009,7 +1009,7 @@
                                     </div>
                                 </div>
                                 <!-- tabulator創立table -->
-                                <div class="card-detail card-table">
+                                <div class="card-detail card-table card-table-right">
                                     <!-- card-detail >> board -->
                                     <div class="detail-board">
                                         <div class="content-component content-table">
@@ -1165,40 +1165,8 @@
                         <!-- 左右排版樣式 -->
                         <div class="card-detail">
                             <div class="card-multiple-container">
-                                <!-- tabulator創立table -->
-                                <div class="card-detail card-table">
-                                    <!-- card-detail >> board -->
-                                    <div class="detail-board">
-                                        <div class="content-component content-table">
-                                            <div class="table-func">
-                                                <div class="table-func-inner">
-                                                    <div class="table-func-basic">
-                                                        <div class="func-basic-item func-download">
-                                                            <ul>
-                                                                <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="func-basic-item func-count">
-                                                            <ul>
-                                                                <li class="count-total">4</li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="func-basic-item func-filter">
-                                                            <div class="func-filter-inner">
-                                                                <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="table-func-page">頁碼</div>
-                                                </div>
-                                            </div>
-                                            <div id="table04"></div>
-                                            <div class="table-footer">footer</div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <!-- data -->
-                                <div class="card-detail card-data">
+                                <div class="card-detail card-data card-data-right">
                                     <div class="card-data-inner">
                                         <div class="card-data-row">
                                             <div class="data-row-inner">
@@ -1241,6 +1209,38 @@
                                                 <div class="data-row-title"><span>合計</span></div>
                                                 <div class="data-row-content" attr="money">24,398</div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabulator創立table -->
+                                <div class="card-detail card-table card-table-left">
+                                    <!-- card-detail >> board -->
+                                    <div class="detail-board">
+                                        <div class="content-component content-table">
+                                            <div class="table-func">
+                                                <div class="table-func-inner">
+                                                    <div class="table-func-basic">
+                                                        <div class="func-basic-item func-download">
+                                                            <ul>
+                                                                <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="func-basic-item func-count">
+                                                            <ul>
+                                                                <li class="count-total">4</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="func-basic-item func-filter">
+                                                            <div class="func-filter-inner">
+                                                                <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-func-page">頁碼</div>
+                                                </div>
+                                            </div>
+                                            <div id="table04"></div>
+                                            <div class="table-footer">footer</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1533,7 +1533,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-detail card-table card-data-right">
+                                <div class="card-detail card-table">
                                     <div class="card-data-right-inner">
                                         <div class="sub-form">
                                             <div class="customize-form-row">
