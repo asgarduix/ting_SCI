@@ -47,7 +47,8 @@ $(document).ready(function() {
         $(this).attr('data-placement', 'left');
     });
     $('[data-toggle="tooltip"]').tooltip({
-        trigger: 'hover'
+        trigger: 'hover',
+        html: true
     });
 });
 
@@ -58,4 +59,40 @@ function onlyNumberKey(evt) {
         return false;
     return true;
 }
+
+// include-menu-structure
+async function includeMenu() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.querySelectorAll(".menu-list");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+                    if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("include-html");
+                    includeMenu();
+                }
+            }
+            xhttp.open("GET", file, false);
+            xhttp.send();
+            /* Exit the function: */
+            return 
+        }
+    }
+}
+
+includeMenu().then(()=>{
+    const pageId = document.getElementById('canvas');
+    const pageClass = pageId.getAttribute("class");
+    const pageName = pageClass.split('-')[0];
+    document.querySelector(`.menu-list a[href^=${pageName}]`).classList.add('menu-list-active');
+});
 
