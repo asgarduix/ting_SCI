@@ -114,7 +114,6 @@
                                     <option>銀資管理：陳怡芳(ABC12345)</option>
                                 </select>
                             </li>
-                            <li class="header-info-time"><span>time</span></li>
                             <li class="header-info-logout"><a href="javascript:;">登出</a></li>
                         </ul>
                     </div>
@@ -804,7 +803,7 @@
                         <!-- 信評機構/投資限額 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-1 customize-form-field-fluid">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">信評機構</div>
                                         <div class="customize-form-entry">
@@ -1042,8 +1041,8 @@
                                         <div class="customize-form-title">跨區註</div>
                                         <div class="customize-form-entry">
                                             <ul>
-                                                <li><input type="radio" id="frd01" name="作業項目"><label for="frd01">報表</label></li>
-                                                <li><input type="radio" id="frd02" name="作業項目"><label for="frd02">維護</label></li>
+                                                <li><input type="radio" id="frd01" name="作業項目"><label for="frd01">徹票</label></li>
+                                                <li><input type="radio" id="frd02" name="作業項目"><label for="frd02">退票</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1100,7 +1099,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
+                                <div class="customize-form-field customize-form-field-1 customize-form-field-fluid">
                                     <div class="customize-form-thumbnail">
                                         <div class="customize-form-thumbnail-image" attr='empty'>
                                             <!-- <img src="img/seal.png" alt=""> -->
@@ -1321,6 +1320,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="customize-form-field customize-form-field-1 customize-form-field-icon">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">保/批單號碼</div>
+                                            <div class="customize-form-entry">
+                                                <div class="customize-form-entry-container">
+                                                    <div class="customize-form-entry-col customize-form-entry-8">
+                                                        <input type="text" name="保批單號碼" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
+                                                    </div>
+                                                    <div class="customize-form-entry-col customize-form-entry-2">
+                                                        <span class="tp"><span class="material-icons">info</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1439,17 +1453,31 @@
                                 <span>理由</span>
                             </div>
                         </div>
+                        <!-- 理由 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-4">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-entry">
+                                        <div class="customize-form-entry customize-form-input">
                                             <ul>
-                                                <li><input type="checkbox" id="add-ck03" name="理由"><label for="add-ck03">支票抬頭或金額等開立錯誤</label></li>
-                                                <li><input type="checkbox" id="add-ck04" name="理由"><label for="add-ck04">票期不符合收費出單規定</label></li>
-                                                <li><input type="checkbox" id="add-ck05" name="理由"><label for="add-ck05">支票遭銀行通知存款不足</label></li>
-                                                <li><input type="checkbox" id="add-ck06" name="理由"><label for="add-ck06">理賠出險，改其他繳費憑證</label></li>
-                                                <li><input type="checkbox" id="add-ck07" name="理由"><label for="add-ck07">其他</label><span><input type="text"></span></li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck03" name="理由"><label for="add-ck03">換票(銀行尚未託收)</label></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck04" name="理由"><label for="add-ck04">支票抬頭或金額等開立錯誤</label></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck05" name="理由"><label for="add-ck05">票期不符合收費出單規定</label></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck06" name="理由"><label for="add-ck06">支票遭銀行通知存款不足</label></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck07" name="理由"><label for="add-ck07">理賠出險，改其他繳費憑證</label></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck08" name="理由"><label for="add-ck08">其他</label><span><input type="text" placeholder="請輸入其他說明"></span></div>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1466,18 +1494,102 @@
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-4">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-entry">
+                                        <div class="customize-form-entry customize-form-input">
                                             <ul>
-                                                <li><input type="checkbox" id="add-ck08" name="處理方式"><label for="add-ck08">更正支票（限銀行尚未收件）</label></li>
-                                                <li><input type="checkbox" id="add-ck09" name="處理方式"><label for="add-ck09">重新開立支票（換票）</label></li>
-                                                <li><input type="checkbox" id="add-ck10" name="處理方式"><label for="add-ck10">改其他繳費憑證：</label>
-                                                    <span><input type="radio" id="add-rd04" name="改其他繳費憑證"><label for="add-rd04">現金</label></span>
-                                                    <span><input type="radio" id="add-rd05" name="改其他繳費憑證"><label for="add-rd05">信用卡</label></span><span><input type="text"></span>
-                                                    <span><input type="radio" id="add-rd06" name="改其他繳費憑證"><label for="add-rd06">匯款</label></span><span><input type="text"></span>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck09" name="處理方式"><label for="add-ck09">更正支票</label><span><input type="text" placeholder="請輸入更正說明"></span></div>
                                                 </li>
-                                                <li><input type="checkbox" id="add-ck11" name="處理方式"><label for="add-ck11">轉請財務部進行催收作業</label></li>
-                                                <li><input type="checkbox" id="add-ck12" name="處理方式"><label for="add-ck12">其他</label><span><input type="text"></span></li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck10" name="處理方式"><label for="add-ck10">重新開立支票</label><span><input type="text" placeholder="請輸入支票號碼"></span></div>
+                                                </li>
                                             </ul>
+                                            <ul>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck11" name="處理方式"><label for="add-ck11">改其他繳費憑證(註3)：</label></div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <input type="checkbox" id="add-ck11-1" name="改其他繳費憑證"><label for="add-ck11-1">現金</label><span><input type="text" placeholder="請輸入金額"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <input type="checkbox" id="add-ck11-2" name="改其他繳費憑證"><label for="add-ck11-2">現金轉銀存</label><span><input type="text" placeholder="請輸入帳號"></span>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck11-3" name="改其他繳費憑證"><label for="add-ck11-3">信用卡</label><span><input type="text" placeholder="請輸入訂單號碼"></span></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck11-4" name="改其他繳費憑證"><label for="add-ck11-4">匯款</label><span><input type="text" placeholder="請輸入帳號"></span></div>
+                                                </li>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck11-5" name="改其他繳費憑證"><label for="add-ck11-5">暫收款</label><span><input type="text" placeholder="請輸入帳號"></span></div>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck12" name="處理方式"><label for="add-ck12">支票未兌現且無法處理，轉請財務部進行催收作業</label></div>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <div><input type="checkbox" id="add-ck13" name="處理方式"><label for="add-ck13">其他</label><span><input type="text" placeholder="請輸入其他處理方式"></span></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>上傳附件</span>
+                            </div>
+                        </div>
+                        <!-- 上傳附件 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-entry customize-form-input customize-form-input-upload">
+                                            <div class="content-component content-upload">
+                                                <form action="">
+                                                    <div class="upload-inner">
+                                                        <div class="upload-item upload-btn">
+                                                            <ul>
+                                                                <li><button>瀏覽</button></li>
+                                                                <li><button disabled="">上傳</button></li>
+                                                                <li><button disabled="">清除</button></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="upload-item upload-error">
+                                                            <p>上傳檔案已存在!!</p>
+                                                        </div>
+                                                        <div class="upload-item upload-note">
+                                                            <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="content-file-list">
+                                                <div class="content-file-list-inner">
+                                                    <ul>
+                                                        <li>
+                                                            <span>檔案名稱.clv</span>
+                                                            <span class="material-icons">cancel</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>檔案名稱.clv</span>
+                                                            <span class="material-icons">cancel</span>
+                                                        </li>
+                                                        <li>
+                                                            <span>檔案名稱.clv</span>
+                                                            <span class="material-icons">cancel</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1486,9 +1598,15 @@
                         <!-- 備註 -->
                         <div class="customize-form-row customize-form-row-note">
                             <ul>
-                                <li><span>註1</span><p>各單位如有撤退票情形發生時，應出具撤退票申請表，並附上相關證明文件(含該筆支票銷帳時之繳費日報表)，經單位主管簽准後，送交總公司財務部用印，並取回該票據留存備查，轉列催收款。</p></li>
-                                <li><span>註2</span><p>撤退票據應由總公司/分公司財務人員保管，保戶領回該票據，應提供等同該筆撤退票據金額之現金、匯款或信用卡付款。但以票據交換者， 本票應由銀行擔當付款人。到期日應等於或早於原撤退票據之到期日；支票發票日應等於或早於原撤退票之到期日。</p></li>
-                                <li><span>註3</span><p>依據汽車保險收費出單承保作業程序及應注意事項規定，以支票繳費，如欲改以其他方式繳交，須重啟要保程序。故車險申請撤票者，不得改其他方式繳費。</p></li>
+                                <li><span>註1</span>
+                                    <p>各單位如有撤退票情形發生時，應出具撤退票申請表，並附上相關證明文件(含該筆支票銷帳時之繳費日報表)，經單位主管簽准後，送交總公司財務部用印，並取回該票據留存備查，轉列催收款。</p>
+                                </li>
+                                <li><span>註2</span>
+                                    <p>撤退票據應由總公司/分公司財務人員保管，保戶領回該票據，應提供等同該筆撤退票據金額之現金、匯款或信用卡付款。但以票據交換者， 本票應由銀行擔當付款人。到期日應等於或早於原撤退票據之到期日；支票發票日應等於或早於原撤退票之到期日。</p>
+                                </li>
+                                <li><span>註3</span>
+                                    <p>依據汽車保險收費出單承保作業程序及應注意事項規定，以支票繳費，如欲改以其他方式繳交，須重啟要保程序。故車險申請撤票者，不得改其他方式繳費。</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -1522,6 +1640,118 @@
                             </div>
                         </div>
                     </div>
+                    <hr>
+                    <!-- tabulator創立table(可編輯table) -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>未收查詢設定</span><a class="add-sub-form"><button type="button">新增</button></a>
+                            </div>
+                        </div>
+                        <!-- tabulator創立table -->
+                        <div class="card-detail card-detail-editable">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div id="table02"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- customize-form+tabulator -->
+                    <div class="customize-form">
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>現金維護</span>
+                            </div>
+                        </div>
+                        <!-- 現金金額/票據張數/票據金額/聯絡電話 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">現金金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="現金金額" value="1,019" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據張數</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據張數" value="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票據金額</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票據金額" value="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">聯絡電話</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="聯絡電話" value="0227588400" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 繳款人/備註 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">繳款人</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="繳款人" value="236820" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">備註</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="備註" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-4">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">EMAIL</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="EMAIL" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customize-form-row">
+                            <div class="customize-form-header">
+                                <span>支票維護</span><a class="add-sub-form"><button type="button">新增</button></a>
+                            </div>
+                        </div>
+                        <!-- tabulator創立table -->
+                        <div class="card-detail card-detail-editable">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table form-content-table">
+                                    <div id="table03"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dialog-btn">
                     <ul>
@@ -1531,6 +1761,8 @@
                 </div>
             </form>
         </div>
+        <!-- customize-form-tooltip-content -->
+        <div class="tp-container">批單號碼：123456<br>批單號碼：246802<br>批單號碼：135791</div>
     </div>
 </body>
 <!-- jQuery_3.5.1  -->
@@ -1638,6 +1870,371 @@ var popupOperationTable = new Tabulator("#popup-operation-table01", {
 //popupOperationTable.selectRow("a1");
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+</script>
+<!-- customize-form-tooltip -->
+<script>
+// const tooltips = Array.from(document.querySelectorAll(".tp>a"));
+// const tooltipContainer = document.querySelector(".tp-container");
+
+function getPosition(element) {
+    let x = 0;
+    let y = 0;
+    while (element) {
+        x += element.offsetLeft - element.scrollLeft + element.clientLeft;
+        y += element.offsetTop - element.scrollLeft + element.clientTop;
+        element = element.offsetParent;
+    }
+    return { x: x, y: y };
+}
+
+
+// tooltips.forEach((tooltip) => {
+//     tooltip.addEventListener("mouseenter", (e) => {
+
+//         tooltipContainer.classList.add("fade-in");
+//         var test = getPosition(e.target);
+//         tooltipContainer.style.left = `${test.x+30}px`;
+//         tooltipContainer.style.top = `${test.y+30}px`;
+
+
+//         console.log(test, e.pageX, e.pageY);
+
+//     });
+
+//     tooltip.addEventListener("mouseout", () => {
+//         tooltipContainer.classList.remove("fade-in");
+//     });
+// });
+///////////////////////////////////////////////////////////////
+const tooltips = Array.from(document.querySelectorAll(".tp"));
+const tooltipContainer = document.querySelector(".tp-container");
+
+tooltips.forEach(function(tooltip) {
+    tooltip.addEventListener("mouseenter", function(e) {
+        tooltipContainer.classList.add("fade-in");
+        var mousePosition = getPosition(e.target);
+        tooltipContainer.style.left = `${e.pageX}px`;
+        tooltipContainer.style.top = `${mousePosition.y+e.offsetY}px`;
+        console.log(e, e.offsetY);
+    });
+
+    tooltip.addEventListener("mouseout", function(e) {
+        tooltipContainer.classList.remove("fade-in");
+    })
+});
+
+tooltipContainer.addEventListener('mouseenter', function() {
+    tooltipContainer.classList.add("fade-in");
+});
+
+tooltipContainer.addEventListener('mouseout', function() {
+    tooltipContainer.classList.remove("fade-in");
+});
+////////////////////////////////////////////////////////
+let table02Data = [{
+        id: "a1",
+        公點經手人: "經手人",
+        比照公點: "公點",
+        對應窗口: "窗口",
+        總公司對應窗口: "窗口",
+        銷帳單位: "出納",
+        險種: "火險",
+        業務來源: "來源",
+        專案代號: "代號",
+    },
+    {
+        id: "a2",
+        公點經手人: "經手人",
+        比照公點: "公點",
+        對應窗口: "窗口",
+        總公司對應窗口: "窗口",
+        銷帳單位: "出納",
+        險種: "火險",
+        業務來源: "來源",
+        專案代號: "代號",
+    },
+];
+let table02 = new Tabulator("#table02", {
+    data: table02Data,
+    height: "100%",
+    layout: "fitColumns",
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    headerSort: false,
+    movableColumns: false,
+    resizableRows: false,
+    columns: [{
+            title: "",
+            field: "del",
+            minWidth: 50,
+            width: 50,
+            formatter: (cell) => {
+                let row = cell.getRow()
+                let table = cell.getTable()
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                span.classList.add("customize-form-field-delete")
+                cell.getElement().classList.add("tabulator-input-editable-btn");
+                btn.setAttribute("type", "button")
+                btn.innerText = "刪除"
+                btn.addEventListener("click", e => {
+                    e.stopPropagation()
+                    if (table.getDataCount() > 1) {
+                        row.delete()
+                    } else {
+                        alert("至少保留一筆")
+                    }
+                })
+                span.appendChild(btn)
+                return span
+            }
+        },
+        {
+            title: "公點經手人",
+            field: "公點經手人",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "比照公點",
+            field: "比照公點",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "對應窗口",
+            field: "對應窗口",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "總公司對應窗口",
+            field: "總公司對應窗口",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "銷帳單位",
+            field: "銷帳單位",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "出納": "出納",
+                "會計": "會計",
+                "保費": "保費",
+            }
+        },
+        {
+            title: "險種",
+            field: "險種",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-select", "tabulator-select-editable");
+                return "<div class='table-select-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "select",
+            editorParams: {
+                "車險": "車險",
+                "火險": "火險",
+                "水險": "水險",
+            }
+        },
+        {
+            title: "業務來源",
+            field: "業務來源",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "專案代號",
+            field: "專案代號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+
+    ],
+    tabEndNewRow: true,
+    tabEndNewRow: function(row) {
+        let rowData = row.getData();
+        return { ...rowData };
+    }
+});
+//////////////////////////////////////////////////////////////////////
+let table03Data = [{
+        id: "a1",
+        票號: "票號",
+        金額: "金額",
+        開票人: "開票人",
+        關係: "關係",
+        到期日: "到期日",
+        帳號: "帳號",
+        付款行: "付款行",
+        收費來源: "收費來源",
+    },
+    {
+        id: "a2",
+        票號: "票號",
+        金額: "金額",
+        開票人: "開票人",
+        關係: "關係",
+        到期日: "到期日",
+        帳號: "帳號",
+        付款行: "付款行",
+        收費來源: "收費來源",
+    },
+];
+let table03 = new Tabulator("#table03", {
+    data: table03Data,
+    height: "100%",
+    layout: "fitColumns",
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    headerSort: false,
+    movableColumns: false,
+    resizableRows: false,
+    columns: [{
+            title: "",
+            field: "del",
+            minWidth: 50,
+            width: 50,
+            formatter: (cell) => {
+                let row = cell.getRow()
+                let table = cell.getTable()
+                let btn = document.createElement("button")
+                let span = document.createElement("span")
+                span.classList.add("customize-form-field-delete")
+                cell.getElement().classList.add("tabulator-input-editable-btn");
+                btn.setAttribute("type", "button")
+                btn.innerText = "移除"
+                btn.addEventListener("click", e => {
+                    e.stopPropagation()
+                    if (table.getDataCount() > 1) {
+                        row.delete()
+                    } else {
+                        alert("至少保留一筆")
+                    }
+                })
+                span.appendChild(btn)
+                return span
+            }
+        },
+        {
+            title: "票號",
+            field: "票號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "金額",
+            field: "金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+            hozAlign: "right",
+        },
+        {
+            title: "開票人",
+            field: "開票人",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "關係",
+            field: "關係",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "到期日",
+            field: "到期日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "帳號",
+            field: "帳號",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "付款行",
+            field: "付款行",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+        {
+            title: "收費來源",
+            field: "收費來源",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            editable: true,
+        },
+
+    ],
+    tabEndNewRow: true,
+    tabEndNewRow: function(row) {
+        let rowData = row.getData();
+        return { ...rowData };
+    }
+});
 </script>
 
 </html>

@@ -44,22 +44,8 @@
                     </div>
                     <div class="menu-pgName"><span>應收系統</span></div>
                     <div class="non-menu-list"><span>暫無項目</span></div>
-                    <div class="menu-list">
-                        <ul>
-                            <li>
-                                <a href="#" class="menu-list-active">
-                                    <span>FBCM0100</span>
-                                    <span>應收票據建檔維護</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>FBCM0100</span>
-                                    <span>應收票據建檔維護</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- menu-list -->
+                    <div class="menu-list" include-html="include/menu/layout.html"></div>
                 </div>
             </div>
         </nav>
@@ -77,14 +63,36 @@
                                 <div class="header-unit-item header-unit-finance">
                                     <a href="#" title="財務">財務</a>
                                     <ul>
-                                        <li><a href="#">應收系統</a></li>
-                                        <li><a href="#">銷帳系統</a></li>
-                                        <li><a href="#">應付系統</a></li>
-                                        <li><a href="#">催收系統</a></li>
-                                        <li><a href="#">銀資系統</a></li>
-                                        <li><a href="#">查詢系統</a></li>
-                                        <li><a href="#">統計系統</a></li>
-                                        <li><a href="#">分析系統</a></li>
+                                        <li><a href="#" level-next="true">資金運用</a>
+                                            <ul>
+                                                <li><a href="#">短期票券</a></li>
+                                                <li><a href="#">定存管理</a></li>
+                                                <li><a href="#">銀行存款</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" level-next="true">應收帳款</a>
+                                            <ul>
+                                                <li><a href="#">應收票據</a></li>
+                                                <li><a href="#">信用卡</a></li>
+                                                <li><a href="#">繳費簽收</a></li>
+                                                <li><a href="#">約定扣款</a></li>
+                                                <li><a href="#">條碼</a></li>
+                                                <li><a href="#">銷帳</a></li>
+                                                <li><a href="#">暫收</a></li>
+                                                <li><a href="#">催收</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" level-next="true">應付帳款</a>
+                                            <ul>
+                                                <li><a href="#">退保支付</a></li>
+                                                <li><a href="#">理賠支付</a></li>
+                                                <li><a href="#">費用支付</a></li>
+                                                <li><a href="#">佣金支付</a></li>
+                                                <li><a href="#">應付未付</a></li>
+                                                <li><a href="#">付款作業</a></li>
+                                                <li><a href="#">國內外交易</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="header-unit-item header-unit-invest">
@@ -574,7 +582,13 @@
                                 </div>
                             </div>
                         </div>
-                        <hr class="seperate-line">
+                        <!-- 搜尋結果標題 -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board result-title-block">
+                                搜尋結果
+                            </div>
+                        </div>
                         <!-- 訊息顯示-single-msg -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -1843,6 +1857,499 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 多檔案上傳區塊+tabulator創建table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <!-- 多檔案上傳區塊 -->
+                                <div class="content-component content-multiple-upload">
+                                    <div class="upload-inner">
+                                        <div class="upload-item upload-btn">
+                                            <ul>
+                                                <li><button>瀏覽</button></li>
+                                                <li><button disabled="">上傳</button></li>
+                                                <li><button disabled="">清除</button></li>
+                                            </ul>
+                                        </div>
+                                        <div class="upload-item upload-error">
+                                            <p>上傳檔案已存在!!</p>
+                                        </div>
+                                        <div class="upload-item upload-note">
+                                            <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="content-file-list">
+                                        <div class="content-file-list-inner">
+                                            <ul>
+                                                <li>
+                                                    <span>檔案名稱.clv</span>
+                                                    <span class="material-icons">cancel</span>
+                                                </li>
+                                                <li>
+                                                    <span>檔案名稱.clv</span>
+                                                    <span class="material-icons">cancel</span>
+                                                </li>
+                                                <li>
+                                                    <span>檔案名稱.clv</span>
+                                                    <span class="material-icons">cancel</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">15</li>
+                                                        <li class="count-check">12</li>
+                                                        <li class="count-error">修改上限不得超過2筆！</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table13"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- 金額合計+tabulator創建table -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board">
+                                <div class="content-component content-table">
+                                    <div class="table-func">
+                                        <div class="table-func-inner">
+                                            <div class="table-func-basic">
+                                                <div class="func-basic-item func-download">
+                                                    <ul>
+                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <!-- <li><a href="#" class="table-pdf" title="下載pdf" data-toggle="tooltip" data-placement="top">PDF</a></li> -->
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-count">
+                                                    <ul>
+                                                        <li class="count-total">1</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="func-basic-item func-filter">
+                                                    <div class="func-filter-inner">
+                                                        <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table-func-page">頁碼</div>
+                                        </div>
+                                    </div>
+                                    <div id="table14"></div>
+                                    <div class="table-footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="seperate-line">
+                        <!-- 月曆 -->
+                        <div class="card-detail">
+                            <!-- card-detail >> board -->
+                            <div class="detail-board detail-board-calendar">
+                                <!-- year and month -->
+                                <div class="detail-board-calendar-title">
+                                    <span class="calendar-condition calendar-item">銷帳</span>
+                                    <span class="calendar-condition calendar-year" time-unit="年">2022</span>
+                                    <span class="calendar-condition calendar-month" time-unit="月">06</span>
+                                </div>
+                                <div class="content-component content-calendar">
+                                    <div class="content-calendar-item content-calendar-week">
+                                        <div class="content-calendar-unit">週日</div>
+                                        <div class="content-calendar-unit">週一</div>
+                                        <div class="content-calendar-unit">週二</div>
+                                        <div class="content-calendar-unit">週三</div>
+                                        <div class="content-calendar-unit">週四</div>
+                                        <div class="content-calendar-unit">週五</div>
+                                        <div class="content-calendar-unit">週六</div>
+                                    </div>
+                                    <div class="content-calendar-item content-calendar-date">
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">01</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">02</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">03</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">04</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">05</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">06</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">07</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">08</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">09</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">10</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">11</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">12</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">13</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">14</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">15</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">16</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">17</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">18</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">19</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                <div class="calendar-num">20</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">21</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">22</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">23</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">24</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">25</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">26</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">27</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">28</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">29</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="" selected="">休假</option>
+                                                        <option value="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">30</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                <div class="calendar-num">31</div>
+                                                <div class="calendar-content">
+                                                    <select name="" id="">
+                                                        <option value="">休假</option>
+                                                        <option value="" selected="">工作</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                        <div class="content-calendar-unit">
+                                            <div class="content-calendar-unit-inner content-calendar-break">
+                                                &nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
@@ -2016,8 +2523,6 @@
 <!-- <script src="json/table01.js"></script> -->
 <!-- 自定義js -->
 <script src="js/layout.js"></script>
-<!-- pg使用 -->
-<script src="js/pg.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
@@ -3120,6 +3625,254 @@ var table12 = new Tabulator("#table12", {
 table12.selectRow(["a1", "a2"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+////////////////////////////////////
+var table13Data = [{
+        id: "a1",
+        借貸: "貸",
+        燈號: "不良",
+        銀行代號: "0060855",
+        銀行名稱: "合庫仁愛",
+        帳號: "0855717326151",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
+    },
+    {
+        id: "a2",
+        借貸: "貸",
+        燈號: "不良",
+        銀行代號: "8221252",
+        銀行名稱: "中信銀信義",
+        帳號: "252890002163",
+        狀態: "活存",
+        調度金額: "5,000,000.00",
+        匯費: "25.00"
+    },
+];
+
+
+
+var table13 = new Tabulator("#table13", {
+    data: table13Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    //height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            title: "",
+            field: "借貸",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+        },
+        {
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        {
+            title: "",
+            field: "燈號",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            formatter: function(cell, formatterParams, onRendered) {
+                let hintData = cell.getValue();
+                if (hintData === "不良") {
+                    return "<span class='hint-bad'></span>";
+                } else if (hintData === "正常") {
+                    return "<span class='hint-normal'></span>";
+                } else if (hintData === "良好") {
+                    return "<span class='hint-good'></span>";
+                }
+            },
+            // formatter: "link",
+        },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "狀態", field: "狀態" },
+        {
+            title: "調度金額",
+            field: "調度金額",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+        {
+            title: "匯費",
+            field: "匯費",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+    ],
+});
+// 選擇預設勾選row
+table13.selectRow(["a1", "a2"]);
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+////////////////////////////////////
+let table14Data = [{
+        id: "a1",
+        管理單位: "總公司",
+        銀行代號: "0040037",
+        銀行名稱: "臺銀營業部",
+        帳號: "00300130855",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "0",
+        餘額日: "111/06/02",
+        餘額160: "266078",
+    },
+    {
+        id: "a2",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001039661",
+        幣別: "USD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/05",
+        餘額160: "2244694",
+    },
+    {
+        id: "a3",
+        管理單位: "總公司",
+        銀行代號: "0040646",
+        銀行名稱: "臺銀松山",
+        帳號: "064001055189",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "1459",
+        餘額日: "111/05/30",
+        餘額160: "9076983",
+    },
+    {
+        id: "a4",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "3001507",
+    },
+    {
+        id: "a5",
+        管理單位: "總公司",
+        銀行代號: "0050740",
+        銀行名稱: "土銀敦化",
+        帳號: "074001031809",
+        幣別: "NTD",
+        去年業績: "0",
+        今年業績: "-34158",
+        餘額日: "110/12/21",
+        餘額160: "1",
+    },
+]
+var hasGroupSummary = {}
+var table = new Tabulator("#table14", {
+    height: "311px",
+    layout: "fitColumns",
+    movableRows: true,
+    groupBy: ["銀行名稱", "幣別"],
+    movableRows: false,
+    headerSort: false,
+    groupHeader: function(value, count, data, group) {
+        //value - the value all members of this group share
+        //count - the number of rows in this group
+        //data - an array of all the row data objects in this group
+        //group - the group component for the group
+        let total = data.reduce((sum, item) => {
+
+            return sum += item["餘額160"] * 1
+        }, 0)
+        // console.log(group);
+        return `${total}`
+    },
+    data: table14Data,
+    columns: [
+        { title: "管理單位", field: "管理單位" },
+        { title: "銀行代號", field: "銀行代號" },
+        { title: "銀行名稱", field: "銀行名稱" },
+        { title: "帳號", field: "帳號" },
+        { title: "幣別", field: "幣別" },
+        { title: "去年業績", field: "去年業績", hozAlign: "right" },
+        { title: "今年業績", field: "今年業績", hozAlign: "right" },
+        {
+            title: "餘額日",
+            field: "餘額日",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+        },
+        {
+            title: "餘額1/60",
+            field: "餘額160",
+            formatter: function(cell, formatterParams, onRendered) {
+                cell.getElement().classList.add("table-input", "tabulator-input-editable");
+                return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
+            },
+            editor: "input",
+            hozAlign: "right",
+        },
+    ],
+
+    rowFormatter: function(row) {
+        var element = row.getElement();
+        var data = row.getData();
+        var group = row.getGroup();
+
+        var key = data["銀行名稱"] + group.getKey();
+        var groupRows = group.getRows();
+
+        if (key in hasGroupSummary) {
+            hasGroupSummary[key] += 1;
+        } else {
+            hasGroupSummary[key] = 1;
+        }
+
+        if (groupRows.length === hasGroupSummary[key]) {
+            let container = document.createElement("div");
+            container.classList.add("table-money-count");
+            let amount = groupRows.reduce((sum, row) => {
+                return sum += row.getData()["餘額160"] * 1
+            }, 0)
+            container.innerText = amount;
+            element.appendChild(container);
+        }
+    },
+});
 </script>
 
 </html>
